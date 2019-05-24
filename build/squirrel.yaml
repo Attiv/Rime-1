@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.4.0
   timestamps:
     squirrel: 1548171029
-    squirrel.custom: 1548419995
+    squirrel.custom: 1558700057
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -57,7 +57,7 @@ preset_color_schemes:
     comment_text_color: 0x999999
     corner_radius: 5
     font_face: "PingFangSC-Regular,HanaMinB"
-    font_point: 16
+    font_point: 18
     hilited_candidate_back_color: 0xFFF0E4
     hilited_candidate_text_color: 0xEE6E00
     horizontal: false
@@ -96,7 +96,7 @@ preset_color_schemes:
     candidate_text_color: 0x000000
     comment_text_color: 0x808080
     corner_radius: 6
-    font_point: 16
+    font_point: 18
     hilited_candidate_back_color: 0xeeeeee
     hilited_candidate_label_color: 0xa0c98915
     hilited_candidate_text_color: 0xc98915
@@ -128,7 +128,7 @@ preset_color_schemes:
     comment_text_color: 0x999999
     corner_radius: 2
     font_face: "HYQiHei-55S Book,HanaMinA Regular"
-    font_point: 14
+    font_point: 18
     hilited_candidate_back_color: 0xfff0e4
     hilited_candidate_label_color: 0x555555
     hilited_candidate_text_color: 0x000000

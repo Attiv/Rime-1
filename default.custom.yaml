@@ -5,7 +5,7 @@ patch:
   switcher/hotkeys:
     - "Control+grave"       
     - "Control+Shift+grave"  
-  menu/page_size: 5
+  menu/page_size: 6
   ascii_composer:
     good_old_caps_lock: true
     switch_key:
@@ -32,8 +32,8 @@ patch:
     - {accept: ISO_Left_Tab, send: "Shift+Left", when: composing}
     - {accept: "Shift+Tab", send: Page_Up, when: composing}
     - {accept: Tab, send: Page_Down, when: composing}
-    # - {accept: minus, send: Page_Up, when: has_menu}
-    #- {accept: equal, send: Page_Down, when: has_menu}
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
     - {accept: bracketleft, send: Page_Up, when: paging}  
     - {accept: bracketright, send: Page_Down, when: has_menu}
     # - { when: has_menu, accept: semicolon, send: 2 }
