@@ -1,14 +1,14 @@
 __build_info:
-  rime_version: 1.4.0
+  rime_version: 1.5.3
   timestamps:
-    default: 1548171029
-    default.custom: 1558699692
-    key_bindings: 1548171029
+    default: 1561294610
+    default.custom: 1590166255
+    key_bindings: 1561294610
     key_bindings.custom: 0
-    punctuation: 1548171029
+    punctuation: 1561294610
     punctuation.custom: 0
 ascii_composer:
-  good_old_caps_lock: true
+  good_old_caps_lock: false
   switch_key:
     Caps_Lock: commit_code
     Control_L: commit_text

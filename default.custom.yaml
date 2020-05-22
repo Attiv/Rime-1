@@ -7,7 +7,7 @@ patch:
     - "Control+Shift+grave"  
   menu/page_size: 6
   ascii_composer:
-    good_old_caps_lock: true
+    good_old_caps_lock: false
     switch_key:
       Shift_L: inline_ascii
       Shift_R: inline_ascii
