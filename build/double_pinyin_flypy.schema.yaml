@@ -1,9 +1,9 @@
 __build_info:
   rime_version: 1.5.3
   timestamps:
-    default: 1561294610
+    default: 1590223138
     default.custom: 1590166255
-    double_pinyin_flypy.custom: 1590165680
+    double_pinyin_flypy.custom: 1590223709
     double_pinyin_flypy.schema: 1590165680
     key_bindings: 1561294610
     key_bindings.custom: 0
@@ -16,6 +16,10 @@ custom_phrase:
   enable_sentence: false
   initial_quality: 1
   user_dict: custom_phrase
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
 engine:
   filters:
     - "simplifier@emoji_suggestion"
