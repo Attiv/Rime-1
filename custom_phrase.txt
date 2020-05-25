@@ -24,6 +24,8 @@ Rime	rime	3
 ⌃	ctl
 ⌥	opt
 ⇧	shift
+Android	ad
+🙃️	hh
 GBK	gbk
 UTF-8	utfba
 macOS High Sierra	macos	2
