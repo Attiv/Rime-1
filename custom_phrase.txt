@@ -25,6 +25,7 @@ Rime	rime	3
 ⌥	opt
 ⇧	shift
 Android	ad
+😂️	xk
 🙃️	hh
 GBK	gbk
 UTF-8	utfba
