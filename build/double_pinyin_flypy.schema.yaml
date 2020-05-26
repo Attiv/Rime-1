@@ -2,9 +2,9 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     default: 1590223138
-    default.custom: 1590460124
+    default.custom: 1590460133
     double_pinyin_flypy.custom: 1590223709
-    double_pinyin_flypy.schema: 1590165680
+    double_pinyin_flypy.schema: 1590461382
     key_bindings: 1561294610
     key_bindings.custom: 0
     punctuation: 1561294610
@@ -27,7 +27,6 @@ engine:
     - uniquifier
     - single_char_filter
   processors:
-    - ascii_composer
     - recognizer
     - key_binder
     - speller
