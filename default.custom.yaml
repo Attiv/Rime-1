@@ -9,7 +9,7 @@ patch:
   ascii_composer:
     good_old_caps_lock: false
     switch_key:
-      Shift_L: noop
+      Shift_L: inline_ascii
       Shift_R: inline_ascii
       Control_L: commit_text
       Control_R: commit_text
