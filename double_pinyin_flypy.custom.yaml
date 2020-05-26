@@ -70,7 +70,8 @@ patch:
       url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]{1,10}[.:_-].*$"
 
   ### 精简 simp
-  "translator/dictionary": pinyin_simp
+  "translator/dictionary": luna_pinyin.extended
+  # "translator/dictionary": pinyin_simp
   "translator/preedit_format": {}
 
   ### 双拼使用自定义词典 custom_phrase.txt

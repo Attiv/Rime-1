@@ -3,7 +3,7 @@ __build_info:
   timestamps:
     default: 1590223138
     default.custom: 1590460133
-    double_pinyin_flypy.custom: 1590223709
+    double_pinyin_flypy.custom: 1590506226
     double_pinyin_flypy.schema: 1590461382
     key_bindings: 1561294610
     key_bindings.custom: 0
@@ -214,7 +214,7 @@ switches:
   - name: ascii_punct
     states: ["。，", "．，"]
 translator:
-  dictionary: pinyin_simp
+  dictionary: luna_pinyin.extended
   preedit_format:
     {}
   prism: double_pinyin_flypy
