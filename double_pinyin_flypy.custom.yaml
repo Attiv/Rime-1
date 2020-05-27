@@ -17,6 +17,7 @@ patch:
   engine/translators:
     - punct_translator
     - script_translator
+    - lua_translator@date_translator
   engine/filters:
     - simplifier@emoji_suggestion
     - simplifier@zh_simp

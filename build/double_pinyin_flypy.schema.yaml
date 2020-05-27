@@ -3,7 +3,7 @@ __build_info:
   timestamps:
     default: 1590223138
     default.custom: 1590460133
-    double_pinyin_flypy.custom: 1590506226
+    double_pinyin_flypy.custom: 1590545785
     double_pinyin_flypy.schema: 1590461382
     key_bindings: 1561294610
     key_bindings.custom: 0
@@ -43,6 +43,7 @@ engine:
   translators:
     - punct_translator
     - script_translator
+    - "lua_translator@date_translator"
     - "table_translator@custom_phrase"
 key_binder:
   bindings:
