@@ -254,4 +254,6 @@ patch:
 
   "app_options/com.runningwithcrayons.Alfred-3/ascii_mode": false
   "com.sublimetext.3/ascii_mode": false
-  "com.apple.Finder/ascii_mode": true
+  "com.apple.Finder/ascii_mode": false
+  "app_options/com.microsoft.VSCode/ascii_mode": false
+  "app_options/com.apple.dt.Xcode/ascii_mode": false
