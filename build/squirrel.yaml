@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     squirrel: 1561294610
-    squirrel.custom: 1590993810
+    squirrel.custom: 1591335308
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -22,7 +22,7 @@ app_options:
   com.github.atom:
     ascii_mode: true
   com.googlecode.iterm2:
-    ascii_mode: true
+    ascii_mode: false
     no_inline: true
   com.macromates.TextMate.preview:
     ascii_mode: true

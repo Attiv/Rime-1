@@ -257,3 +257,4 @@ patch:
   "com.apple.Finder/ascii_mode": false
   "app_options/com.microsoft.VSCode/ascii_mode": false
   "app_options/com.apple.dt.Xcode/ascii_mode": false
+  "app_options/com.googlecode.iterm2/ascii_mode": false
