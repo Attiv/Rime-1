@@ -3,6 +3,26 @@ patch:
     color_scheme: apathy
 
   preset_color_schemes:
+    rimeblue:
+      name: "RimeBlue"
+      horizontal: false                           # 候选条横向显示
+      inline_preedit: true                        # 启用内嵌编码模式，候选条首行不显示拼音
+      candidate_format: "%c.\u2005%@\u2005"       # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      corner_radius: 10                            # 候选条圆角半径
+      border_height: 0                            # 窗口边界高度，大于圆角半径才生效
+      border_width: 12                            # 窗口边界宽度，大于圆角半径才生效
+      back_color: 0x4F4F4F                        # 候选条背景色
+      line_spacing: 0                             # 候选词的行间距
+      # spacing: 3                                  # 在非内嵌编码模式下，预编辑和候选词之间的间距
+      border_color: 0xE0B693                      # 边框色
+      font_face: "PingFangSC-Regular"             # 候选词字体
+      font_point: 20                              # 预选栏文字字号
+      label_font_face: "PingFangSC-Regular"       # 候选词编号字体
+      label_font_point: 20                        # 预选栏编号字号
+      text_color: 0xFFFFFF                        # HEX颜色代码，但是要注意顺序是蓝绿红（倒序）0xBBGGRR
+      candidate_text_color: 0xFFFFFF              #非第一候选项
+      hilited_candidate_back_color: 0xD1BA53      #第一候选项背景
+      hilited_candidate_text_color: 0xFFFFFF      #第一候选项
     mojave_dark:
       name: "沙漠夜／Mojave Dark"
       author: "xiehuc <xiehuc@gmail.com>"
@@ -37,14 +57,15 @@ patch:
       comment_text_color: 0x999999
       corner_radius: 5
       hilited_corner_radius: 3
-      font_face: "PingFangSC-Regular,HanaMinB"
-      font_point: 18
+      # font_face: "PingFangSC-Regular,HanaMinB"
+      font_face: Fira Code
+      font_point: 17
       hilited_candidate_back_color: 0xCF5D1F
       hilited_candidate_text_color: 0xffffff
       horizontal: true
       inline_preedit: true
       label_font_face: "STHeitiSC-Light"
-      label_font_point: 18
+      label_font_point: 17
       name: "冷漠／Apathy"
       text_color: 0x424242
     aqua:
