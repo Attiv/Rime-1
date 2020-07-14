@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     squirrel: 1561294610
-    squirrel.custom: 1591335308
+    squirrel.custom: 1594702837
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -59,9 +59,10 @@ preset_color_schemes:
     corner_radius: 5
     font_face: "PingFangSC-Regular,HanaMinB"
     font_point: 18
-    hilited_candidate_back_color: 0xFFF0E4
-    hilited_candidate_text_color: 0xEE6E00
-    horizontal: false
+    hilited_candidate_back_color: 0xD44619
+    hilited_candidate_text_color: 0xffffff
+    hilited_corner_radius: 3
+    horizontal: true
     inline_preedit: true
     label_font_face: "STHeitiSC-Light"
     label_font_point: 18
