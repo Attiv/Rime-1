@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     squirrel: 1561294610
-    squirrel.custom: 1609837619
+    squirrel.custom: 1609859106
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -49,6 +49,37 @@ com.sublimetext.3:
   ascii_mode: false
 config_version: 0.33
 preset_color_schemes:
+  Win10:
+    back_color: 0xffffff
+    border_color: 0xcc8f29
+    border_height: 6
+    border_width: 6
+    candidate_format: "%c %@  "
+    candidate_spacing: 24
+    candidate_text_color: 0x000000
+    comment_text_color: 0x888888
+    font_face: "汉仪正圆"
+    font_point: 16
+    hilite_padding: 12
+    hilite_spacing: 8
+    hilited_back_color: 0xffffff
+    hilited_candidate_back_color: 0xcc8f29
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_label_color: 0xffffff
+    hilited_text_color: 0x000000
+    horizontal: true
+    inline_preedit: true
+    label_color: 0x888888
+    label_format: "%s"
+    margin_x: 12
+    margin_y: 12
+    min_height: 0
+    min_width: 160
+    name: Win10
+    round_corner: 0
+    spacing: 10
+    text_color: 0x000000
   apathy:
     author: "LIANG Hai"
     back_color: 0xFFFFFF
@@ -66,6 +97,7 @@ preset_color_schemes:
     inline_preedit: true
     label_font_face: "STHeitiSC-Light"
     label_font_point: 17
+    margin_y: 6
     name: "冷漠／Apathy"
     text_color: 0x424242
   aqua:
@@ -188,6 +220,28 @@ preset_color_schemes:
     hilited_text_color: 0x7fffff
     name: "明月／Luna"
     text_color: 0xa5a5a5
+  mac:
+    author: lamb
+    back_color: 0xffffff
+    border_color: 0x9f62e8
+    border_color_width: 0
+    border_height: 4
+    border_width: 4
+    candidate_format: "%c %@  "
+    candidate_text_color: 0x333333
+    corner_radius: 5
+    font_face: "汉仪正圆"
+    font_point: 16
+    hilited_candidate_back_color: 0xD05B21
+    hilited_candidate_label_color: 0xffffff
+    hilited_corner_radius: 5
+    hilited_text_color: 0xffffff
+    horizontal: true
+    inline_preedit: true
+    label_color: 0x888888
+    label_font_point: 14
+    name: lamb
+    text_color: 0x333333
   mojave_dark:
     author: "xiehuc <xiehuc@gmail.com>"
     back_color: 0x252320
@@ -294,5 +348,5 @@ preset_color_schemes:
     text_color: 0xccaa88
 show_notifications_when: appropriate
 style:
-  color_scheme: apathy
+  color_scheme: mac
 us_keyboard_layout: false
