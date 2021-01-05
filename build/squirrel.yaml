@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     squirrel: 1561294610
-    squirrel.custom: 1609830582
+    squirrel.custom: 1609837619
 app_options:
   co.zeit.hyper:
     ascii_mode: true
