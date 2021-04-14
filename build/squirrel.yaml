@@ -1,8 +1,8 @@
 __build_info:
-  rime_version: 1.5.3
+  rime_version: 1.7.3
   timestamps:
-    squirrel: 1561294610
-    squirrel.custom: 1609859106
+    squirrel: 1613228858
+    squirrel.custom: 1612241938
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -21,6 +21,8 @@ app_options:
     ascii_mode: true
   com.github.atom:
     ascii_mode: true
+  com.google.Chrome:
+    inline: true
   com.googlecode.iterm2:
     ascii_mode: false
     no_inline: true
@@ -42,12 +44,15 @@ app_options:
   org.vim.MacVim:
     ascii_mode: true
     no_inline: true
+    vim_mode: true
+  ru.keepcoder.Telegram:
+    inline: true
 chord_duration: 0.1
 com.apple.Finder:
   ascii_mode: false
 com.sublimetext.3:
   ascii_mode: false
-config_version: 0.33
+config_version: 0.37
 preset_color_schemes:
   Win10:
     back_color: 0xffffff
@@ -223,7 +228,7 @@ preset_color_schemes:
   mac:
     author: lamb
     back_color: 0xffffff
-    border_color: 0x9f62e8
+    border_color: 0xffffff
     border_color_width: 0
     border_height: 4
     border_width: 4

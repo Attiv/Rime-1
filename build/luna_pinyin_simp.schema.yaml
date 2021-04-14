@@ -6,14 +6,14 @@ __build_info:
     key_bindings: 1609856500
     key_bindings.custom: 0
     luna_pinyin_simp.custom: 0
-    luna_pinyin_simp.schema: 1590223134
+    luna_pinyin_simp.schema: 1611032451
     punctuation: 1609856500
     punctuation.custom: 0
 custom_phrase:
   db_class: stabledb
   dictionary: ""
   enable_completion: false
-  enable_sentence: false
+  enable_sentence: true
   initial_quality: 1
   user_dict: custom_phrase
 engine:
