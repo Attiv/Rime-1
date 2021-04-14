@@ -56,5 +56,5 @@ recognizer:
     uppercase: ''
 
 # 分词程序
-# patch:
-  # easy_en/wordninja_rs_path: "/Users/wanglikun/github/wordninja-rs/target/release/wordninja"
+patch:
+  easy_en/wordninja_rs_path: "/Users/wanglikun/github/wordninja-rs/target/release/wordninja"

@@ -10,5 +10,6 @@ use_preset_vocabulary: true
 import_tables:
   - pinyin_simp
   - easy_en
-  # - luna_pinyin.sougou
+  - luna_pinyin.sogou
+  - luna_pinyin.sougou
 ...

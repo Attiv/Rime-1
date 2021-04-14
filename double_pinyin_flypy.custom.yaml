@@ -1,4 +1,8 @@
 patch:
+  __include: easy_en:/patch
+  __patch:
+    - patch/+:
+        __include: easy_en:/patch
   schema/dependencies: {}
   switches:
     - name: ascii_mode
@@ -81,12 +85,12 @@ patch:
     user_dict: custom_phrase
     db_class: stabledb
     enable_completion: false
-    enable_sentence: false
+    enable_sentence: true
     initial_quality: 1
   "engine/translators/@5": table_translator@custom_phrase
 
   __include: easy_en:/patch
-  easy_en/enable_sentence: false
+  easy_en/enable_sentence: true
 
   ### 加載 easy_en 依賴
   # "schema/dependencies/@1": easy_en
