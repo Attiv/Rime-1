@@ -100,3 +100,8 @@ __patch:
   - patch/+:
       __include: easy_en:/patch
 # }
+
+patch:
+  key_binder/bindings/+:
+    - {accept: Return, send: space, when: paging}
+    - {accept: Return, send: Return, when: has_menu}
