@@ -2,7 +2,7 @@ patch:
   menu:
     page_size: 6
   ascii_composer/switch_key:
-    Caps_Lock: commit_code
+    Caps_Lock: null
     Control_L: noop
     Control_R: noop
     Shift_L: null
