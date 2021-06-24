@@ -6,7 +6,7 @@ __build_info:
     key_bindings: 1613228859
     key_bindings.custom: 0
     openfly.custom: 1624543836
-    openfly.schema: 1624544861
+    openfly.schema: 1624545342
     punctuation: 1613228859
     punctuation.custom: 0
 engine:
@@ -77,6 +77,13 @@ key_binder:
     - {accept: "Control+Shift+numbersign", toggle: full_shape, when: always}
     - {accept: "Control+Shift+dollar", toggle: simplification, when: always}
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
+    - {accept: bracketleft, send: Page_Up, when: has_menu}
+    - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: ";", send: 2, when: composing}
+    - {accept: comma, send: 2, when: composing}
+    - {accept: Tab, send: Escape, when: composing}
+    - {accept: "Release+semicolon", send: semicolon, when: composing}
+    - {accept: "Release+comma", send: comma, when: composing}
   import_preset: default
 menu:
   page_size: 5
