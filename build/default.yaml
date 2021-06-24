@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1613228859
-    default.custom: 1626427474
+    default.custom: 1624544013
     key_bindings: 1613228859
     key_bindings.custom: 0
     punctuation: 1613228859
@@ -126,8 +126,7 @@ recognizer:
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
 schema_list:
-  - schema: xhup
-  - schema: double_pinyin_flypy
+  - schema: openfly
 switcher:
   abbreviate_options: true
   caption: "〔方案選單〕"
@@ -138,10 +137,4 @@ switcher:
     - F4
   option_list_separator: "／"
   save_options:
-    - full_shape
-    - ascii_punct
-    - simplification
-    - extended_charset
-    - zh_hant
-    - zh_hans
-    - zh_hant_tw
+    - openfly_enable_2nd_short
