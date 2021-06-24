@@ -1,4 +1,11 @@
 patch:
   schema_list:
-  - schema: xhup
-  - schema: double_pinyin_flypy
+  - schema: openfly
+  # - schema: xhup
+  # - schema: double_pinyin_flypy
+__patch:
+# Rx: amorphobia/openfly:: {
+  - patch/+:
+      "switcher/save_options/+":
+        - "openfly_enable_2nd_short"
+# }
