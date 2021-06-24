@@ -1,4 +1,10 @@
 select_character_processor = require("select_character")
+openfly_shortcut_processor = require("openfly_shortcut_processor")
+openfly_date_translator = require("openfly_date_translator")
+openfly_time_translator = require("openfly_time_translator")
+openfly_shortcut_translator = require("openfly_shortcut_translator")
+openfly_hint_filter = require("openfly_hint_filter")
+openfly_deletion_filter = require("openfly_deletion_filter") 
 
 -- easy_en_enhance_filter: 连续输入增强
 -- 详见 `lua/easy_en.lua`
