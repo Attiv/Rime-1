@@ -10,23 +10,23 @@ Session.vim
 
 *.userdb
 *.bin
-luna_pinyin.custom.*.dict.yaml
-luna_pinyin.custom.*.*.dict.yaml
-custom_phrase.txt
+# luna_pinyin.custom.*.dict.yaml
+# luna_pinyin.custom.*.*.dict.yaml
+# custom_phrase.txt
 
 ### generated files
 
-squirrel.yaml
-default.yaml
-symbols.yaml
-installation.yaml
-user.yaml
-.place_holder
-build
-sync
-trash
-luna_pinyin.custom.dict.yaml
-*.schema.yaml
-stroke.dict.yaml
-opencc
-emoji_suggestion.yaml
+# squirrel.yaml
+# default.yaml
+# symbols.yaml
+# installation.yaml
+# user.yaml
+# .place_holder
+# build
+# sync
+# trash
+# luna_pinyin.custom.dict.yaml
+# *.schema.yaml
+# stroke.dict.yaml
+# opencc
+# emoji_suggestion.yaml
