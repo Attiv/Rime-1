@@ -1,18 +1,14 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.5.3
   timestamps:
     bopomofo.custom: 0
-    bopomofo.schema: 1613228859
-    default: 1613228859
+    bopomofo.schema: 1561218640
+    default: 1561218646
     default.custom: 0
-    grammar: 1613228859
-    grammar.custom: 0
-    key_bindings: 1624545838
+    key_bindings: 1561218646
     key_bindings.custom: 0
-    punctuation: 1613228859
+    punctuation: 1561218646
     punctuation.custom: 0
-    zhuyin: 1613228858
-    zhuyin.custom: 0
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -25,8 +21,7 @@ editor:
     space: toggle_selection
 engine:
   filters:
-    - "simplifier@zh_hans"
-    - "simplifier@zh_hant_tw"
+    - simplifier
     - uniquifier
   processors:
     - ascii_composer
@@ -48,8 +43,6 @@ engine:
     - "table_translator@custom_phrase"
     - reverse_lookup_translator
     - script_translator
-grammar:
-  language: "zh-hant-t-essay-bgw"
 key_binder:
   bindings:
     - {accept: "Control+p", send: Up, when: composing}
@@ -182,31 +175,32 @@ reverse_lookup:
     - "xform/([iv])e/$1E/"
     - "xform/1//"
     - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
-  dictionary: stroke
+  dictionary: cangjie5
   enable_completion: true
   preedit_format:
-    - "xlit/hspnz/一丨丿丶乙/"
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
   prefix: "`"
   suffix: "'"
-  tips: "〔筆畫〕"
+  tips: "〔倉頡〕"
 schema:
   author:
     - "佛振 <chen.sst@gmail.com>"
   dependencies:
-    - stroke
+    - cangjie5
   description: |
     注音符號輸入，採用「大千式」鍵盤排列。
     
     本方案採用「無模式」設計，以大寫字母鍵或上下方向鍵、回車鍵選詞；
     空格鍵輸入第一聲，標記爲「ˉ」。
     
-    請配合 librime>=1.3 使用。
+    請配合 librime>=0.9.8 使用。
     
   name: "注音"
   schema_id: bopomofo
-  version: 2.4
+  version: 2.2
 speller:
   algebra:
+    - "erase/^xx$/"
     - "xform/^m(\\d)$/mu$1/"
     - "xform/^r5$/er5/"
     - "xform/iu/iou/"
@@ -251,25 +245,10 @@ switches:
     states: ["中文", "西文"]
   - name: full_shape
     states: ["半角", "全角"]
-  - options: [zh_hant, zh_hans, zh_hant_tw]
-    states: ["傳統漢字", "简化字", "臺灣字形"]
+  - name: simplification
+    states: ["漢字", "汉字"]
 translator:
-  contextual_suggestions: true
   dictionary: terra_pinyin
-  max_homographs: 7
-  max_homophones: 7
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙ |"
   prism: bopomofo
-zh_hans:
-  excluded_types:
-    - reverse_lookup
-  opencc_config: t2s.json
-  option_name: zh_hans
-  tips: all
-zh_hant_tw:
-  excluded_types:
-    - reverse_lookup
-  opencc_config: t2tw.json
-  option_name: zh_hant_tw
-  tips: none

@@ -1,16 +1,14 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.5.3
   timestamps:
-    default: 1613228859
+    default: 1561218646
     default.custom: 0
-    grammar: 1613228859
-    grammar.custom: 0
-    key_bindings: 1624545838
+    key_bindings: 1561218646
     key_bindings.custom: 0
-    punctuation: 1613228859
+    punctuation: 1561218646
     punctuation.custom: 0
     terra_pinyin.custom: 0
-    terra_pinyin.schema: 1613228858
+    terra_pinyin.schema: 1561218650
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -42,8 +40,6 @@ engine:
     - "table_translator@custom_phrase"
     - reverse_lookup_translator
     - script_translator
-grammar:
-  language: "zh-hant-t-essay-bgw"
 key_binder:
   bindings:
     - {accept: "Control+p", send: Up, when: composing}
@@ -206,9 +202,10 @@ schema:
     
   name: "地球拼音"
   schema_id: terra_pinyin
-  version: 0.20
+  version: 0.19
 speller:
   algebra:
+    - "erase/^xx$/"
     - "xform/^r5$/er5/"
     - "abbrev/^([a-z]).+$/$1/"
     - "abbrev/^([zcs]h).+$/$1/"
@@ -272,10 +269,7 @@ translator:
     - "xform/([nljqxy])v/$1ü/"
     - "xform/eh[0-5]?/ê/"
     - "xform/([a-z]+)[0-5]/$1/"
-  contextual_suggestions: true
   dictionary: terra_pinyin
-  max_homographs: 7
-  max_homophones: 7
   preedit_format:
     - "xform/([nl])v/$1ü/"
     - "xform/([nl])ue/$1üe/"
