@@ -4,6 +4,7 @@ openfly_time_translator = require("openfly_time_translator")
 openfly_shortcut_translator = require("openfly_shortcut_translator")
 openfly_hint_filter = require("openfly_hint_filter")
 openfly_deletion_filter = require("openfly_deletion_filter")
+calculator_translator = require("calculator_translator")
 
 function date_translator(input, seg)
    if (input == "orq") then

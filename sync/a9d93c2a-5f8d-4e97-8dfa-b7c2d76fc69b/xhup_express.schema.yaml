@@ -2,15 +2,15 @@
 # encoding: utf-8
 
 schema:
-  schema_id: xhup
-  name: 小鶴音形
+  schema_id: xhup_express
+  name: 小鶴音形·連打
   version: "2018.9.18.0"
   author:
     - xhup by 鶴
     - Rime schema by Zhaosheng Pan <zhaosheng.pan@sololand.moe>
   description: |
-    小鶴雙拼音形方案
-    四键自动上屏
+    小鶴雙拼音形方案·連打錄入！
+    以分號或單引號分詞、標點或空格上屏。
   dependencies:
     - flypydz
 
@@ -46,33 +46,22 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - table_translator
-    - lua_translator@openfly_date_translator
-    - lua_translator@openfly_time_translator
-    - lua_translator@openfly_shortcut_translator
-    - lua_translator@calculator_translator
   filters:
     - simplifier
     - uniquifier
 
 speller:
-  alphabet: 'zyxwvutsrqponmlkjihgfedcba#'
-  #initials: ';'
-  finals: '#'
-  delimiter: " '"
-  max_code_length: 4
-  auto_select: true
-  auto_select_pattern: ^;.$|^\w{4}$
-  auto_select_unique_candidate: true
-  auto_clear: max_length
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " ;'"
 
 translator:
   dictionary: flypy
-  enable_charset_filter: false
-  enable_encoder: false
-  enable_sentence: false
-  encode_commit_history: false
+  enable_charset_filter: true
+  enable_encoder: true
+  enable_sentence: true
+  encode_commit_history: true
   enable_completion: false
-  enable_user_dict: false
+  enable_user_dict: true
   max_phrase_length: 14
   disable_user_dict_for_patterns:
     - "^z.*$"
@@ -97,18 +86,9 @@ punctuator:
 
 key_binder:
   import_preset: default
-  bindings:
-    - {accept: bracketleft, send: Page_Up, when: has_menu} # [上翻页
-    - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
-    - {accept: ";", send: 2, when: composing}
-    - {accept: comma, send: 2, when: composing}
-    - {accept: "Tab", send: Escape, when: composing}
-    - {accept: Release+semicolon, send: semicolon, when: composing}
-    - {accept: Release+comma, send: comma, when: composing}
 
 recognizer:
   import_preset: default
   patterns:
     punct: "^/([0-9]0?|[a-z]+)$"
     reverse_lookup: "oi[a-z]*'?$"
-  expression: "^=.*$"

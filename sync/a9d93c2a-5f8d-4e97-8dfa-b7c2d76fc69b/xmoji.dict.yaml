@@ -1,0 +1,499 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# xmoji - 小鹤双拼 Emoji
+#
+# amorphobia <xuesongpeng.cn@gmail.com>
+#
+# 编码规则
+#     使用 "e" 引导 Emoji 输入模式，因此用于选词的编码最多只有3码。
+#     "e+3码" - 对于三字或三字以上的词语，使用第一、第二、和最后一字的首码；对于两字的词语，使用两字的首码和末字的第三码（与官方的随心所欲类似）；对于单字，使用前三码
+#     "e+2码" - 以上模式的前两码
+#
+# 码表规则
+#     1. 无重码时使用 "e+3码"
+#     2. 占用小鹤音形原本的4码直接上屏时，使用 "e+2码"
+#     3. 不占用原本4码的情况下，"e+3码" 有重码时，尽量维持 "e+3码" 直接上屏，将重码分配到 "e+2码" 的首选和次选
+#
+
+---
+name: xmoji
+version: "0.1"
+sort: by_weight
+use_preset_vocabulary: false
+...
+🇦🇺` 澳大利亚	eady
+🇦🇫` 阿富汗	eafh
+❤️` 爱	eai
+😘` 爱	eai
+💗` 爱	eaip
+💓` 爱	eaip
+😍` 爱	eaip
+🤫` 安静	eajf
+🛂` 安检	eajm
+🇪🇬` 埃及	eajp
+🇲🇴` 澳门	eamd
+🇴🇲` 阿曼	eamo
+🦞` 鳌	eaof
+💓` 爱情	eaq
+👩‍❤️‍👨` 爱情	eaq
+👩‍❤️‍💋‍👨` 爱情	eaqx
+🇦🇿` 阿塞拜疆	easj
+💗` 爱心	eax
+❤️` 爱心	eax
+🧡` 爱心	eaxd
+🥰` 爱心	eaxd
+🧍🏻‍♀️` 阿姨	eayn
+👨🏻‍` 爸爸	ebbb
+# ebdl - “二八定律”
+🕗` 八点	ebd
+🕣` 八点半	ebdb
+🦠` 病毒	ebdf
+🇧🇾` 白俄罗斯	ebes
+🏨` 宾馆	ebgu
+👙` 比基尼	ebjn
+🇵🇰` 巴基斯坦	ebjt
+🧊` 冰	ebkd
+🌰` 板栗	eblx
+⚾️` 棒球	ebq
+🏒️` 冰球	ebqw
+😒` 鄙视	ebu
+👎🏻` 鄙视	ebup
+✋🏻` 布	ebuu
+💥` 爆炸	ebvh
+🪕` 班卓琴	ebvq
+🇧🇷` 巴西	ebxa
+🙄️` 白眼	ebyo
+👃🏻` 鼻子	ebzv
+🌘` 残月	ecyk
+🏂` 单板	edbm
+🌏` 东半球	edbq
+💩` 大便	edbr
+🤏🏻` 一点点	eydd
+🍰` 蛋糕	edg
+🧁` 蛋糕	edg
+🇩🇪` 德国	edgk
+# edgm - “二等公民”
+🎂` 蛋糕	edgm
+♣️` 草花	echc
+🥈` 第二名	edem
+🪢` 打结	edjs
+🥚` 蛋	edjv
+💡` 灯泡	edpd
+🙇🏻` 道歉	edq
+🙇🏻‍♀️` 道歉	edqb
+🌐` 地球	edqw
+🧄` 大蒜	edsc
+🥉` 第三名	edsm
+🚇` 地铁	edt
+🚉` 地铁	edt
+🚈` 地铁	edtj	10
+Ⓜ️` 地铁	edtj	10
+🛗` 电梯	edtm	90
+🦘` 袋鼠	eduj
+🌤️` 多云	edy
+⛅️` 多云	edy
+☝🏻` 第一	edya
+☁️` 多云	edye
+🥇` 第一名	edym
+# eed - “额度”，eedj - “鹅蛋”
+👂🏻` 耳朵	eed
+🇪🇨` 厄瓜多尔	eege
+🇷🇺` 俄罗斯	eels
+# eem - “阏”，eemg - “噩梦”
+😈` 恶魔	eem
+🦹🏻‍♂️` 恶魔	eeme	# 特殊
+🦹🏻‍♀️` 恶魔	eeme	# 特殊
+🌒` 蛾眉月	eemy
+# eezv - “遏”
+👦🏻` 儿子	eez
+🎯` 飞镖	efbj
+🇫🇷` 法国	efgk
+⛵️` 帆船	efiv
+😡` 烦	efjh
+♦️` 方块	efkt
+🇵🇭` 菲律宾	eflb
+♦️` 方片	efpp
+🥏` 飞盘	efpv
+🍅` 番茄	efqc
+🌍` 非洲	efvd
+🫁` 肺	efwo
+🧼` 肥皂	efzb	10
+🏠` 房子	efzv	90
+🇨🇺` 古巴	egbv
+👠` 高跟鞋	eggx
+♟` 国际象棋	egjq
+🏈` 橄榄球	eglq
+💿` 光盘	egp
+📀` 光盘	egp
+💽` 光盘	egpv
+🎹` 钢琴	egqw
+👏🏻` 鼓掌	egvx
+⛸️` 滑冰	ehbd
+👌🏻` 好	ehc
+🆗` 好	ehcn
+🇰🇷` 韩国	ehgk
+😓` 汗	ehj
+😅` 汗	ehj
+😰` 汗	ehjd
+😥` 汗	ehjd
+💦` 汗	ehjd
+🚀` 火箭	ehjv
+🇳🇱` 荷兰	ehlb
+🍈` 哈密瓜	ehmg
+🔥` 火	ehod
+♠️` 黑桃	eht
+♥️` 红桃	ehtm
+💦` 汗水	ehu
+🍠` 红薯	ehuc
+🇲🇪` 黑山	ehul
+💤` 酣睡	ehuo
+🥜` 花生	ehup
+💐` 花	ehx
+🌷` 花	ehx
+🌼` 花	ehxc
+🌸` 花	ehxc
+🌹` 花	ehxc
+♥️` 红心	ehxd
+🧪` 化学	ehxx
+⛷️` 滑雪	ehxy
+🐒` 猴子	ehz
+🐵` 猴子	ehzv
+🚗` 车	eie
+🚘` 车	eie
+🚙` 车	eiea
+🎤` 唱歌	eig
+✖️` 乘	eigq
+👅` 尝	eihx
+😱` 吃惊	eij
+🌼` 雏菊	eijc
+😲` 吃惊	eijx
+🚢` 船	eirv
+# eiu - “二传手”
+➗` 除	eiue
+🇰🇵` 朝鲜	eixa
+🍊` 橙子	eiz
+🔨` 锤子	eizv
+🏆` 奖杯	ejbm
+🇿🇼` 津巴布韦	ejbw
+🕘` 九点	ejd
+✌🏻` 剪刀	ejd
+🕤` 九点半	ejdb
+🏨` 酒店	ejdg
+🥚` 鸡蛋	ejdv
+🇰🇬` 吉尔吉斯斯坦	ejet
+😲` 惊	ejkx
+➖` 减	ejmd
+⌨️` 键盘	ejp
+🏅️` 金牌	ejpp
+🇰🇭` 柬埔寨	ejpv
+😳` 囧	ejsk
+🎸` 吉他	ejtr
+🙋🏻‍♂️` 举手	eju
+🙋🏻` 举手	ejup
+✋🏻` 击掌	ejvx
+🏠` 家	ejx
+➕` 加	ejxl
+🚭` 禁烟	ejyh
+🧬` 基因	ejyk
+🥟` 饺子	ejz
+✂️` 剪子	ejzv
+🥺` 可怜	eklx
+🌖` 亏凸月	ekty
+😭` 哭	eku
+😎` 酷	eku
+😢` 哭	ekuk
+😿` 哭	ekuk
+🆒` 酷	ekuy
+😄` 开心	ekx
+😆` 开心	ekx
+😃` 开心	ekxd
+😺` 开心	ekxd
+☺️` 开心	ekxd
+🥳` 开心	ekxd
+👖` 裤子	ekz
+🥢` 筷子	ekzv
+🕑` 两点	eld
+🕝` 两点半	eldb
+🕡` 六点半	eldb
+🕕` 六点	eldl
+🥶` 冷	elgd
+🌊` 浪	elh
+🇺🇳` 联合国	elhg
+🐺` 狼	elhq
+🚢` 轮船	eliv
+🏀` 篮球	elq
+🥎` 垒球	elqw
+🐉` 龙	els
+👂🏻` 聋	elsl
+🐲` 龙	elsu
+🐲` 龙头	eltd
+🇱🇹` 立陶宛	eltw
+🐭` 老鼠	elu
+🐀` 老鼠	elu
+🐁` 老鼠	eluj
+🥱` 累	elwt
+🦞` 龙虾	elxi
+🍐` 梨子	elzv
+🐎` 马	ema
+🐴` 马	emav
+🐱` 猫	emc
+🐈` 猫	emc
+😺` 猫	emcq
+🪦` 墓地	emdt
+🇺🇸` 美国	emgk
+🇲🇳` 蒙古	emgu
+🌹` 玫瑰	emgw
+♣️` 梅花	emhc
+🥝` 猕猴桃	emht
+🇲🇦` 摩洛哥	emlg
+🇲🇾` 马来西亚	emly
+😜` 卖萌	emm
+🐶` 卖萌	emmc
+👩🏻‍` 妈妈	emmn
+🦬` 牦牛	emnp
+🚽` 马桶	emt
+🪵` 木头	emt
+⛵️` 码头	emtd
+🐴` 马头	emtd
+🦉` 猫头鹰	emty
+🌎` 美洲	emv
+🇲🇽` 墨西哥	emxg
+🧶` 毛线	emxs
+🌕` 满月	emyp
+👧🏻` 女儿	enep
+🇿🇦` 南非	enfl
+🙁️` 难过	eng
+😞` 难过	engz
+😔` 难过	engz
+😫` 难过	engz
+🎃` 南瓜	engp
+🇦🇶` 南极	enjm
+🍋` 柠檬	enmm
+🐦` 鸟	enn
+🐄` 奶牛	enn
+👵🏻` 奶奶	ennn
+🦜` 鸟	ennp
+🐂` 牛	enq
+🐮` 牛	enq
+🐃` 牛	enqp
+🐄` 牛	enqp
+🦬` 牛	enqp
+🆗` OK	eok
+👌🏻` OK	eok
+😯` 哦	eook
+🍎` 苹果	epgl
+🏓️` 乒乓球	eppq
+🏐️` 排球	epqw
+🍇` 葡萄	eptc
+🇵🇹` 葡萄牙	epty
+🧗🏻‍♂️` 攀岩	epy
+🧗🏻‍♀️` 攀岩	epye
+🕢` 七点半	eqdb
+🕖` 七点	eqdl
+🚗` 汽车	eqi
+🚘` 汽车	eqia
+🧹` 清洁	eqjd
+🔫` 枪	eqlm
+💰` 钱	eqmj
+👎🏻` 切	eqp
+🔪` 切	eqpq
+☀️` 晴天	eqta
+🎉` 庆祝	eqv
+🎁` 庆祝	eqv
+🎂` 庆祝	eqvp
+🎀` 庆祝	eqvp
+🎃` 庆祝	eqvp
+🐸` 青蛙	eqwi
+# erba - “二八”
+🇯🇵` 日本	erb
+🇸🇪` 瑞典	erdl
+# eriv - “耳垂”
+🌅` 日出	eri
+# erlc - “二老”
+🌄` 日落	erl
+# erli - “而立”
+📅` 日历	erl
+🇨🇭` 瑞士	eruu
+🕒` 三点	esd
+🕞` 三点半	esdb
+🕟` 四点半	esdb
+🕓` 四点	esdl
+🇷🇸` 塞尔维亚	esey
+🎷` 萨克斯	esks
+👨🏻‍🦲` 秃顶	etd
+🥔` 土豆	etd
+👩🏻‍🦲` 秃顶	etdd
+🦲` 秃顶	etdd
+📌` 图钉	etdj
+🇹🇷` 土耳其	eteq
+🇹🇭` 泰国	etgk
+🍬` 糖果	etgl
+🦶🏻` 踢	etiz
+🇹🇯` 塔吉克斯坦	etjt
+😛` 吐舌	etu
+🤷🏻‍♂️` 摊手	etu
+🤷🏻‍♀️` 摊手	etup
+😝` 吐舌	etuq
+👼🏻` 天使	etur
+😇` 天使	etur
+💃🏻` 跳舞	etw
+🕺🏻` 跳舞	etwp
+🪜` 梯子	etzv
+⌚️` 手表	eubf
+🎿` 双板	eubm
+🕙` 十点	eud
+⚡️` 闪电	eud
+🕥` 十点半	eudb
+🌩️` 闪电	eudl
+🕧` 十二点半	eueb
+🕛` 十二点	eued
+💩` 屎	euiu
+🥟` 水饺	euju
+😪` 睡觉	eujx
+⏳` 沙漏	eul
+⌛️` 沙漏	euld
+🤾🏻‍♂️` 手球	euq
+🤽🏻‍♂️` 水球	euq
+🤾🏻‍♀️` 手球	euqw
+🤽🏻‍♀️` 水球	euqw
+🎂` 生日	eurk
+✊🏻` 石头	eut
+🪨` 石头	eutd
+🌲` 树	euu
+🌳` 树	euu
+🌴` 树	euum
+🧍🏻‍♂️` 叔叔	euuu
+📖` 书	euuv
+🧫` 生物学	euwx
+🌓` 上弦月	euxy
+🕦` 十一点半	euyb
+🕚` 十一点	euyd
+🥄` 勺子	euzv
+🇨🇳` 中国	evgk
+🧱` 砖	evr
+🤩` 哇	ewak
+🕠` 五点半	ewdb
+🕔` 五点	ewdl
+🥣` 碗	ewju
+🤦🏻‍♂️` 捂脸	ewl
+🤦🏻‍♀️` 捂脸	ewlo
+⚛️` 物理	ewlw
+🥡` 外卖	ewmu
+🎾` 网球	ewqw
+🤝` 握手	ewup
+😊` 微笑	ewx
+😃` 微笑	ewx
+⚠️` 危险	ewxe
+🩰` 舞鞋	ewxg
+😁` 微笑	ewxv
+😄` 微笑	ewxv
+😸` 微笑	ewxv
+💖` 心	exb
+💕` 心	exb
+❤️` 心	exbd
+🆕` 新	exbl
+🌎` 西半球	exbq
+🇪🇸` 西班牙	exby
+🇭🇰` 香港	exgd
+🍉` 西瓜	exgp
+🎺` 小号	exhk
+🃏` 小丑	exi
+🤡` 小丑	exi
+🥸` 小丑	exiv
+🍌` 香蕉	exjc
+🪤` 陷阱	exje
+🇸🇬` 新加坡	exjp
+🤣` 笑哭	exk
+😂` 笑哭	exkk
+🌟` 星	exko
+😊` 笑	exn
+😄` 笑	exn
+🦉` 枭	exnp
+😆` 笑	exnv
+😃` 笑	exnv
+😼` 笑	exnv
+👟` 鞋	exp
+👠` 鞋	expg
+🩰` 鞋	expg
+🩸` 血	expp
+⛄️` 雪人	exr
+☃️` 雪人	exrp
+❄️` 雪	ext
+🎻` 小提琴	extq
+✨` 星星	exx
+🌨️` 下雪	exx
+🧛🏻‍♀️` 吸血鬼	exxg	10
+🧛🏻‍♂️` 吸血鬼	exxg	10
+🪐` 行星	exxi	90
+⭐️` 星星	exxo	90
+🌟` 星星	exxo
+🦧` 猩猩	exxq	50
+🦍` 猩猩	exxq
+❄️` 下雪	exxy	10
+🌗` 下弦月	exxy	50
+☔️` 下雨	exy
+🌇` 夕阳	exy
+🌧️` 下雨	exya
+🚬` 吸烟	exyh
+🌑` 新月	exyk
+👢` 靴子	exz
+🫀` 心脏	exz
+✍🏻` 写字	exzb	30
+🛀` 洗澡	exzd	50
+🚿` 洗澡	exzd
+🥿` 鞋子	exzv	90
+🦂️` 蝎子	exzv	10
+🦷` 牙	eyaa
+🥮` 月饼	eybu
+🕐` 一点	eyd
+🕜` 一点半	eydb
+🇮🇳` 印度	eydg
+🇮🇹` 意大利	eydl
+🎵` 音符	eyf
+👔` 衣服	eyfo
+🎶` 音符	eyfv
+🇬🇧` 英国	eygk
+🌸` 樱花	eyhc
+🦷` 牙齿	eyiv
+👀` 眼睛	eyj
+🚬` 烟	eyjh
+👓` 眼镜	eyjj
+👁️` 眼睛	eyjo
+🧂` 盐	eyjt
+🇮🇷` 伊朗	eyld
+🌛` 月亮	eylw	70
+🌙` 月亮	eylw	90
+🌝` 月亮	eylw	50
+🌜` 月亮	eylw	10
+🪶` 羽毛	eymp
+🏸️` 羽毛球	eymq
+🇦🇲` 亚美尼亚	eymy
+🇻🇳` 越南	eynu
+🪕` 乐器	eyqk
+🌕` 月球	eyqw
+🌂` 雨伞	eys
+☂️` 雨伞	eysr
+☁️` 阴天	eyt
+🌥️` 阴天	eyt
+⛅️` 阴天	eyta
+🌔` 盈凸月	eyty
+🌦️` 雨	eyu
+⛈️` 雨	eyu
+🌧️` 雨	eyua
+🌏` 亚洲	eyvd
+💊` 药丸	eywp
+🎵` 音乐	eyy
+🎷` 音乐	eyy
+👴🏻` 爷爷	eyyb
+🎶` 音乐	eyyp
+🎸` 音乐	eyyp
+🎹` 音乐	eyyp
+👄` 嘴巴	ezbv
+# ezj - “恶作剧”
+👍🏻` 赞	ezjn
+⚽️` 足球	ezqw
+🚴🏻` 自行车	ezx
+🚴🏻‍♀️` 自行车	ezxi
+✖︎` 错误  eia
+✓` 对号 edv

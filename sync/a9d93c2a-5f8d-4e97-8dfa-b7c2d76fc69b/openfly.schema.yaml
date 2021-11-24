@@ -49,7 +49,6 @@ engine:
     - lua_translator@openfly_date_translator
     - lua_translator@openfly_time_translator
     - lua_translator@openfly_shortcut_translator
-    - lua_translator@calculator_translator
     - reverse_lookup_translator
     - history_translator@history
   filters:
@@ -127,7 +126,7 @@ recognizer:
     # reverse_lookup: "oi[a-z]*'?$"
     # 万能键
     reverse_lookup: "(oi[a-z]*'?$)|([a-z`]*`+[a-z`]*)"
-    expression: "^=.*$"
+
 
 menu:
   page_size: 5

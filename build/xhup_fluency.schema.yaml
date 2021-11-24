@@ -9,8 +9,8 @@ __build_info:
     punctuation.custom: 0
     symbols: 1613228859
     symbols.custom: 0
-    xhup.custom: 0
-    xhup.schema: 1637765205
+    xhup_fluency.custom: 0
+    xhup_fluency.schema: 1631897799
 engine:
   filters:
     - simplifier
@@ -23,7 +23,7 @@ engine:
     - punctuator
     - selector
     - navigator
-    - express_editor
+    - fluency_editor
   segmentors:
     - ascii_segmentor
     - matcher
@@ -34,10 +34,6 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - table_translator
-    - "lua_translator@openfly_date_translator"
-    - "lua_translator@openfly_time_translator"
-    - "lua_translator@openfly_shortcut_translator"
-    - "lua_translator@calculator_translator"
 key_binder:
   bindings:
     - {accept: bracketleft, send: Page_Up, when: has_menu}
@@ -74,13 +70,6 @@ key_binder:
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
     - {accept: "Shift+space", toggle: full_shape, when: always}
     - {accept: "Control+period", toggle: ascii_punct, when: always}
-    - {accept: bracketleft, send: Page_Up, when: has_menu}
-    - {accept: bracketright, send: Page_Down, when: has_menu}
-    - {accept: ";", send: 2, when: composing}
-    - {accept: comma, send: 2, when: composing}
-    - {accept: Tab, send: Escape, when: composing}
-    - {accept: "Release+semicolon", send: semicolon, when: composing}
-    - {accept: "Release+comma", send: comma, when: composing}
   import_preset: default
 menu:
   page_size: 6
@@ -375,28 +364,22 @@ reverse_lookup:
 schema:
   author:
     - "xhup by 鶴"
-    - "Rime schema by Zhaosheng Pan <zhaosheng.pan@sololand.moe>"
+    - "Rime schema by Zhaosheng Pan <brglng@gmail.com>"
   dependencies:
     - flypydz
   description: |
-    小鶴雙拼音形方案
-    四键自动上屏
+    小鶴雙拼音形方案·語句流錄入！
+    以空格分詞、標點或回車上屏。
     
-  name: "小鶴音形"
-  schema_id: xhup
+  name: "小鶴音形·語句流"
+  schema_id: xhup_fluency
   version: 2018.9.18.0
 simplifier:
   opencc_config: s2t.json
   option_name: simplification
 speller:
-  alphabet: "zyxwvutsrqponmlkjihgfedcba#"
-  auto_clear: max_length
-  auto_select: true
-  auto_select_pattern: "^;.$|^\\w{4}$"
-  auto_select_unique_candidate: true
-  delimiter: " '"
-  finals: "#"
-  max_code_length: 4
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " ;'"
 switches:
   - name: ascii_mode
     reset: 0
@@ -412,10 +395,10 @@ translator:
   disable_user_dict_for_patterns:
     - "^z.*$"
     - "^oi.*$"
-  enable_charset_filter: false
+  enable_charset_filter: true
   enable_completion: false
-  enable_encoder: false
-  enable_sentence: false
-  enable_user_dict: false
-  encode_commit_history: false
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: true
   max_phrase_length: 14
