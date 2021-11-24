@@ -2,11 +2,11 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1613228859
-    default.custom: 1624547591
-    key_bindings: 1624545838
+    default.custom: 1637743940
+    key_bindings: 1631897798
     key_bindings.custom: 0
-    openfly.custom: 1624543836
-    openfly.schema: 1630140066
+    openfly.custom: 1631897798
+    openfly.schema: 1637765275
     punctuation: 1613228859
     punctuation.custom: 0
 engine:
@@ -38,6 +38,7 @@ engine:
     - "lua_translator@openfly_date_translator"
     - "lua_translator@openfly_time_translator"
     - "lua_translator@openfly_shortcut_translator"
+    - "lua_translator@calculator_translator"
     - reverse_lookup_translator
     - "history_translator@history"
 history:
@@ -163,6 +164,7 @@ recognizer:
   import_preset: default
   patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    expression: "^=.*$"
     punct: "^/([0-9]0?|[a-z]+)$"
     reverse_lookup: "(oi[a-z]*'?$)|([a-z`]*`+[a-z`]*)"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"

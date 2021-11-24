@@ -48,9 +48,7 @@ patch:
     Shift_R: null
   schema_list:
   - schema: openfly
-  - schema: xhup
-  - schema: xhup_express
-  - schema: xhup_fluency
+  # - schema: xhup
   # - schema: double_pinyin_flypy
 __patch:
 # Rx: amorphobia/openfly:: {

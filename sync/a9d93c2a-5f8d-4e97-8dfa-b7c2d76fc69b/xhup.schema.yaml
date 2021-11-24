@@ -1,34 +1,33 @@
-# Rime schema settings
+# Rime schema
 # encoding: utf-8
 
 schema:
-  schema_id: openfly
-  name: 开源小鹤
-  version: "v9.9m"
+  schema_id: xhup
+  name: 小鶴音形
+  version: "2018.9.18.0"
   author:
-    - 方案设计：何海峰 <flypy@qq.com>
-    - 修改：amorphobia <xu350n9@gmail.com>
-  description:
-    词库开源的小鹤音形 Rime 配方
+    - xhup by 鶴
+    - Rime schema by Zhaosheng Pan <zhaosheng.pan@sololand.moe>
+  description: |
+    小鶴雙拼音形方案
+    四键自动上屏
   dependencies:
     - flypydz
-    # - openfly_reverse
-
-punctuator:
-  import_preset: default
 
 switches:
   - name: ascii_mode
     reset: 0
+    states: [ 中文, 西文 ]
   - name: full_shape
+    states: [ 半角, 全角 ]
   - name: simplification
-    reset: 0
+    # reset: 1
+    states: [ 汉字, 漢字 ]
   - name: ascii_punct
-    reset: 0
+    states: [ 。，, ．， ]
 
 engine:
   processors:
-    - lua_processor@openfly_shortcut_processor
     - ascii_composer
     - recognizer
     - key_binder
@@ -45,47 +44,35 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator
-    - lua_translator@openfly_date_translator
-    - lua_translator@openfly_time_translator
-    - lua_translator@openfly_shortcut_translator
-    - lua_translator@calculator_translator
     - reverse_lookup_translator
-    - history_translator@history
+    - table_translator
   filters:
-    - lua_filter@openfly_hint_filter
-    - lua_filter@openfly_deletion_filter
     - simplifier
-    - simplifier@simplification
     - uniquifier
 
 speller:
-  alphabet: '/;zyxwvutsrqponmlkjihgfedcba'
-  initials: 'abcdefghijklmnopqrstuvwxyz;'
-  finals: '/'
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba#'
+  #initials: ';'
+  finals: '#'
+  delimiter: " '"
   max_code_length: 4
   auto_select: true
   auto_select_pattern: ^;.$|^\w{4}$
-  auto_clear: max_length # manual | auto | max_length
+  auto_select_unique_candidate: true
+  auto_clear: max_length
 
 translator:
-  dictionary: openfly
+  dictionary: flypy
   enable_charset_filter: false
+  enable_encoder: false
   enable_sentence: false
+  encode_commit_history: false
   enable_completion: false
   enable_user_dict: false
+  max_phrase_length: 14
   disable_user_dict_for_patterns:
     - "^z.*$"
-
-history:
-  input: ;f
-  size: 1
-  initial_quality: 1
-
-simplification:
-  opencc_config: s2tw.json
-  option_name: simplification
-  tips: all
+    - "^oi.*$"
 
 reverse_lookup:
   dictionary: flypydz
@@ -97,10 +84,12 @@ reverse_lookup:
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
 
-# reverse_lookup:
-#   dictionary: openfly_reverse
-#   comment_format:
-#     - xform/ / /
+simplifier:
+  option_name: simplification
+  opencc_config: s2t.json
+
+punctuator:
+  import_preset: symbols
 
 key_binder:
   import_preset: default
@@ -113,24 +102,8 @@ key_binder:
     - {accept: Release+semicolon, send: semicolon, when: composing}
     - {accept: Release+comma, send: comma, when: composing}
 
-# recognizer:
-#   import_preset: default
-#   patterns:
-#     uppercase: ""
-#     reverse_lookup: "[a-z`]*`+[a-z`]*"
-#     punct: ""
-
 recognizer:
   import_preset: default
   patterns:
     punct: "^/([0-9]0?|[a-z]+)$"
-    # reverse_lookup: "oi[a-z]*'?$"
-    # 万能键
-    reverse_lookup: "(oi[a-z]*'?$)|([a-z`]*`+[a-z`]*)"
-    expression: "^=.*$"
-
-menu:
-  page_size: 5
-
-style:
-  horizontal: false
+    reverse_lookup: "oi[a-z]*'?$"
