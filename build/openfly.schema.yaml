@@ -5,7 +5,7 @@ __build_info:
     default.custom: 1637743940
     key_bindings: 1631897798
     key_bindings.custom: 0
-    openfly.custom: 1631897798
+    openfly.custom: 1638241546
     openfly.schema: 1637765275
     punctuation: 1613228859
     punctuation.custom: 0
@@ -215,6 +215,6 @@ translator:
   disable_user_dict_for_patterns:
     - "^z.*$"
   enable_charset_filter: false
-  enable_completion: false
+  enable_completion: true
   enable_sentence: false
   enable_user_dict: false
