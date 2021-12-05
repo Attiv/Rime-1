@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.5.3
   timestamps:
     default: 1561218646
-    default.custom: 1625153995
+    default.custom: 1638721773
     key_bindings: 1561218646
     key_bindings.custom: 0
     punctuation: 1561218646
@@ -10,7 +10,7 @@ __build_info:
     symbols: 1561218646
     symbols.custom: 0
     xhup.custom: 0
-    xhup.schema: 1625153602
+    xhup.schema: 1638721773
 engine:
   filters:
     - simplifier
@@ -352,7 +352,7 @@ recognizer:
   patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
     punct: "^/([0-9]0?|[a-z]+)$"
-    reverse_lookup: "oi[a-z]*'?$"
+    reverse_lookup: "(oi[a-z]*'?$)|([a-z`]*`+[a-z`]*)"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
 reverse_lookup:

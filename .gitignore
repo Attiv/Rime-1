@@ -9,7 +9,7 @@ Session.vim
 ## Project ##
 
 *.userdb
-*.bin
+; *.bin
 # luna_pinyin.custom.*.dict.yaml
 # luna_pinyin.custom.*.*.dict.yaml
 # custom_phrase.txt
