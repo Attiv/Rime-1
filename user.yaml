@@ -1,8 +1,11 @@
 var:
-  last_build_time: 1638241549
+  last_build_time: 1640340756
   previously_selected_schema: openfly
   schema_access_time:
-    openfly: 1637898305
-    xhup: 1637898282
+    numbers: 1639410481
+    openfly: 1639644021
+    wubi86_jidian: 1639644016
+    wubi86_jidian_pinyin: 1639644001
+    xhup: 1638870066
     xhup_express: 1637743957
     xhup_fluency: 1637744037

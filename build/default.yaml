@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1613228859
-    default.custom: 1637743940
+    default.custom: 1639410427
     key_bindings: 1631897798
     key_bindings.custom: 0
     punctuation: 1613228859
@@ -129,6 +129,11 @@ schema_list:
   - schema: xhup
   - schema: xhup_express
   - schema: xhup_fluency
+  - schema: wubi86_jidian
+  - schema: numbers
+  - schema: wubi86_jidian_pinyin
+  - schema: wubi86_jidian_trad
+  - schema: wubi86_jidian_trad_pinyin
 switcher:
   abbreviate_options: true
   caption: "〔方案選單〕"

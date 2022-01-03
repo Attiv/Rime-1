@@ -71,7 +71,7 @@ fixed:
   # ↓ 自动造词的最长字数，看需求
   max_phrase_length: 4
   # ↓ 逐渐提示，看需求
-  enable_completion: false
+  enable_completion: true
   # ↓ 是否开启用户词典，以记录动态字频和用户词词频
   enable_user_dict: false
   disable_user_dict_for_patterns:
