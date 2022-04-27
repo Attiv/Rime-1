@@ -3,14 +3,14 @@
 
 schema:
   schema_id: pinyin_simp
-  name: '简体拼音'
+  name: 袖珍简化字拼音
   version: "0.8"
   author:
     - 佚名
   description: |
     源自 Android 拼音
   dependencies:
-    - stroke
+#    - stroke
 
 switches:
   - name: ascii_mode
@@ -40,7 +40,7 @@ engine:
   translators:
     - punct_translator
     - script_translator
-    - reverse_lookup_translator
+#    - reverse_lookup_translator
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
@@ -76,7 +76,7 @@ reverse_lookup:
     - xlit/hspnz/一丨丿丶乙/
 
 punctuator:
-  import_preset: symbols
+  import_preset: default
 
 key_binder:
   import_preset: default
