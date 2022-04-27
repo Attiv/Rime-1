@@ -5,14 +5,33 @@ __build_info:
     default.custom: 1651054080
     key_bindings: 1631897798
     key_bindings.custom: 0
+    liangfen.custom: 0
+    liangfen.schema: 1644308980
     punctuation: 1613228859
     punctuation.custom: 0
-ascii_composer:
-  good_old_caps_lock: true
-  switch_key:
-    Control_L: noop
-    Control_R: noop
-config_version: 0.40
+engine:
+  filters:
+    - simplifier
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - r10n_translator
+    - reverse_lookup_translator
 key_binder:
   bindings:
     - {accept: bracketleft, send: Page_Up, when: has_menu}
@@ -49,8 +68,9 @@ key_binder:
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
     - {accept: "Shift+space", toggle: full_shape, when: always}
     - {accept: "Control+period", toggle: ascii_punct, when: always}
+  import_preset: default
 menu:
-  page_size: 6
+  page_size: 5
 punctuator:
   full_shape:
     " ": {commit: "　"}
@@ -119,30 +139,50 @@ punctuator:
     "|": ["·", "|", "｜", "§", "¦"]
     "}": ["』", "〗", "｝"]
     "~": ["~", "～"]
+  import_preset: default
 recognizer:
+  import_preset: default
   patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    reverse_lookup: "`[a-z]*$"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
-schema_list:
-  - schema: openfly
-  - schema: xhup
-  - schema: xhup_express
-  - schema: xhup_fluency
-  - schema: wubi86_jidian
-  - schema: numbers
-  - schema: wubi86_jidian_pinyin
-  - schema: wubi86_jidian_trad
-  - schema: wubi86_jidian_trad_pinyin
-  - schema: xkjd6
-switcher:
-  abbreviate_options: true
-  caption: "〔方案選單〕"
-  fold_options: true
-  hotkeys:
-    - "Control+grave"
-    - "Control+Shift+grave"
-    - F4
-  option_list_separator: "／"
-  save_options:
-    - openfly_enable_2nd_short
+reverse_lookup:
+  dictionary: luna_pinyin
+  preedit_format:
+    - "xform/([nljqxy])v/$1ü/"
+  prefix: "`"
+  tips: "〔PinYin〕"
+schema:
+  author:
+    - "TianHeng <2417647441@qq.com>"
+  description: |
+    Use《http://yedict.com/》
+    http://yedict.com/
+    Dict is from http://yedict.com/
+    
+  name: LiangFen
+  schema_id: liangfen
+  version: 4.0
+speller:
+  algebra:
+    - "abbrev/^([a-z]).+$/$1/"
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [Chi, Eng]
+  - name: full_shape
+    states: [Half, Full]
+  - name: simplification
+    states: [Trad, Simp]
+translator:
+  comment_format:
+    - "xlit|v|ü|"
+    - "xform/iü/iv/"
+  dictionary: liangfen
+  preedit_format:
+    - "xlit|v|ü|"
+    - "xform/iü/iv/"
+  spelling_hints: 4

@@ -56,6 +56,7 @@ patch:
   - schema: wubi86_jidian_pinyin
   - schema: wubi86_jidian_trad
   - schema: wubi86_jidian_trad_pinyin
+  - schema: xkjd6
   # - schema: double_pinyin_flypy
 __patch:
 # Rx: amorphobia/openfly:: {

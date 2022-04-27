@@ -1,0 +1,350 @@
+﻿# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: xkjd6
+  name: 键道6
+  version: "1"
+  author:
+    - 发明人 大牛
+  dependencies:
+    - xkjd6cx
+    - pinyin_simp
+    - liangfen
+
+
+# Layout config
+layout:
+  topup:
+    topup_this: "bcdefghjklmnpqrstwxyz"
+    topup_with: "avuio;"
+
+  algebra:
+    - derive/^[bcdefghjklmnpqrstwxyz;]([bcdefghjklmnpqrstwxyz;][avuio].*)$/`$1/
+    - derive/^([bcdefghjklmnpqrstwxyz;])[bcdefghjklmnpqrstwxyz;]([avuio].*)$/$1`$2/
+    - derive/^([bcdefghjklmnpqrstwxyz;`]{2})[avuio](.*)$/$1`$2/
+    - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]).(.*)$/$1`$2/
+    - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{2}).(.*)$/$1`$2/
+    - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{3}).(.*)$/$1`$2/
+    - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{4}).(.*)$/$1`$2/
+    - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/
+    - derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/
+
+  # input_code:
+  #   date: orq
+  #   time: ouj
+  #   week: oxq
+
+  patterns:
+    special: "^(?:;?[avuio])[a-z]{0,}"
+    # input_code: "^(?:orq?|ouj?|oxq?)"
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中, 英 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: jffh
+    reset: 0
+    states: [ 简体, 繁體 ]
+  - name: sbb_hint
+    reset: 1 # 改成0默认关闭
+    states: [ "关₆₃₀", "开₆₃₀" ]
+  - name: EN2en
+    reset: 1
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+
+punctuator:
+  import_preset: symbols
+  full_shape:
+    ' ' : { commit: '　' }
+    ',' : { commit: ， }
+    '.' : { commit: 。 }
+    '<' : [ 《, 〈, «, ‹ ]
+    '>' : [ 》, 〉, », › ]
+    '?' : { commit: ？ }
+    ';' : { commit: ； }
+    ':' : { commit: ： }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    # '/' : { commit: / }
+    '\' : [ 、, ＼ ]
+    '|' : [ ·, ｜, '§', '¦' ]
+    '`' : ｀
+    '~' : ～
+    '!' : { commit: ！ }
+    '@' : [ ＠, ☯ ]
+    '#' : [ ＃, ⌘ ]
+    '%' : [ ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : { commit: …… }
+    '&' : ＆
+    '*' : [ ＊, ·, ・, ×, ※, ❂ ]
+    '(' : （
+    ')' : ）
+    '-' : －
+    '_' : ——
+    '+' : ＋
+    '=' : [ '=' ]
+    '[' : [ 「, 【, 〔, ［ ]
+    ']' : [ 」, 】, 〕, ］ ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
+  half_shape:
+    ',' : { commit: ， }
+    '.' : { commit: 。 }
+    '<' : [ 《, 〈, «, ‹ ]
+    '>' : [ 》, 〉, », › ]
+    # '/' : { commit: / }
+    '?' : { commit: ？ }
+    ';' : { commit: ； }
+    ':' : { commit: ： }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : [ 、, '\', ＼ ]
+    '|' : [ ·, '|', ｜, '§', '¦' ]
+    '`' : '`'
+    '~' : [ '~', ～ ]
+    '!' : { commit: ！ }
+    '@' : '@'
+    '#' : '#'
+    '%' : [ '%', ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : { commit: …… }
+    '&' : '&'
+    '*' : [ '*', ＊, ·, ・, ×, ※, ❂ ]
+    '(' : （
+    ')' : ）
+    '-' : '-'
+    '_' : ——
+    '+' : '+'
+    '=' : '='
+    '[' : [ 「, 【, 〔, ［ ]
+    ']' : [ 」, 】, 〕,  ］ ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
+
+
+engine:
+  processors:
+    - lua_processor@xuanchongjsq
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - lua_processor@topup_processor
+    - lua_processor@smart_2
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@pinyin_simp
+    - affix_segmentor@quanpinerfen
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - lua_translator@jisuanqi
+    - lua_translator@xuanchongjsq
+    - lua_translator@shijian
+    - punct_translator
+    - history_translator@repeat_history
+    - history_translator@repeat_history2
+    - table_translator@custom_phrase
+    - table_translator@danzi_lookup
+    # - lua_translator@date_translator
+    # - lua_translator@time_translator
+    - lua_translator@number_translator
+    - script_translator@quanpinerfen
+    - script_translator@pinyin_simp
+  filters:
+    - uniquifier
+    - reverse_lookup_filter@pinyin_simp_lookup
+    - reverse_lookup_filter@quanpinerfen_lookup
+    - simplifier@emoji_cn
+    - simplifier@jffh
+    - simplifier@ascii_punct
+    - simplifier@bmms
+    - simplifier@EN2en
+    # - lua_filter@hint_filter
+    - lua_filter@xkjd6_filter
+    - reverse_lookup_filter@danzi_lookup
+
+
+
+speller:
+  algebra:
+    __include: "layout/algebra"
+  auto_select: true
+  auto_select_unique_candidate: true #空码自动顶
+  alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
+  initials: "abcdefghijklmnopqrstuvwxyz;/=`"
+
+
+translator:
+  dictionary: xkjd6.extended
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: false
+  enable_user_dict: false
+  encode_commit_history: true
+  max_phrase_length: 6
+
+
+repeat_history:
+  input: i #重复上次上屏内容
+  size: 1
+  initial_quality: 10000
+
+repeat_history2:
+  input: ;f #重复上次上屏内容
+  size: 1
+  initial_quality: 10000
+
+
+emoji_cn:
+  opencc_config: emoji.json
+  option_name: emoji_cn
+  tips: all
+
+
+jffh:
+  opencc_config: s2tw.json
+  option_name: jffh
+
+ascii_punct:
+  option_name: ascii_punct
+
+
+EN2en:
+  opencc_config: EN2en.json
+  option_name: EN2en
+
+
+bmms:
+  opencc_config: pinyin.json
+  option_name: bmms
+  show_in_comment: true
+  comment_format:
+    - xform/'/ /
+
+pinyin_simp_lookup:
+  tags: [pinyin_simp]
+  dictionary: xkjd6cx #反查其码
+  overwrite_comment: true
+
+pinyin_simp:
+  tag: pinyin_simp
+  dictionary: pinyin_simp
+  enable_sentence: true
+  enable_completion: true
+  enable_user_dict: false
+  prefix: "u"
+  tips: "〔全拼〕"
+
+#↓二分反查方案
+quanpinerfen_lookup:
+  tags: [quanpinerfen]
+  dictionary: xkjd6cx #反查其码
+  overwrite_comment: true
+
+quanpinerfen:
+  tag: quanpinerfen
+  dictionary: liangfen
+  enable_sentence: true
+  enable_completion: true
+  enable_user_dict: false
+  prefix: "v"
+  tips: "〔二分〕"
+
+danzi_lookup:
+  dictionary: xkjd6.extended
+  tags: [ danzi_lookup ]
+  overwrite_comment: true
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: false
+  enable_sentence: false
+  enable_user_dict: false
+  encode_commit_history: true
+  comment_format:
+    - xform/^/〔/
+    - xform/$/〕/
+    - xform/ /, /
+
+
+custom_phrase:
+  dictionary: ""
+  user_dict: user_dict
+  db_class: stabledb
+  enable_sentence: false
+  initial_quality: "0"
+
+
+reverse_lookup:
+  dictionary: xkjd6cx
+  comment_format:
+    - xform/^/〔/
+    - xform/$/〕/
+
+
+key_binder:
+  bindings:
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    #- {accept: comma, send: Page_Up, when: has_menu} #句号翻页
+    #- {accept: period, send: Page_Down, when: has_menu}  #句号翻页
+    - { when: always, accept: F7, toggle: jffh }
+    - { when: always, accept: "Control+period", toggle: ascii_punct }
+    - {accept: semicolon, send: 2, when: has_menu} #分号次选
+    - {accept: apostrophe, send: 3, when: has_menu} #撇号三选
+    # - { when: has_menu, accept: "'", send: 2 }
+    - { when: has_menu, accept: "&", toggle: emoji_cn}
+    - { when: has_menu, accept: "^", toggle: bmms}    
+    - {accept: KP_0, send: 0, when: has_menu}
+    - {accept: KP_1, send: 1, when: has_menu}
+    - {accept: KP_2, send: 2, when: has_menu}
+    - {accept: KP_3, send: 3, when: has_menu}
+    - {accept: KP_4, send: 4, when: has_menu}
+    - {accept: KP_5, send: 5, when: has_menu}
+    - {accept: KP_6, send: 6, when: has_menu}
+    - {accept: KP_7, send: 7, when: has_menu}
+    - {accept: KP_8, send: 8, when: has_menu}
+    - {accept: KP_9, send: 9, when: has_menu}
+    - {accept: KP_Subtract, send: -, when: has_menu}
+    - {accept: KP_Divide, send: /, when: has_menu}
+    - {accept: KP_Multiply, send: "*", when: has_menu}
+    - {accept: KP_Add, send: +, when: has_menu}
+    - {accept: KP_Decimal, send: ".", when: has_menu}
+
+
+recognizer:
+  patterns:
+    punct: "^/([0-9]0?|[a-z]+)$"
+    danzi_lookup: "[a-z`]*`+[a-z`]*"
+    email: "^[a-z][-_.0-9a-z]*@.*$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    pinyin: "(?<![`A-Z])`[a-z']*;?$"
+    url: "^(www[.]|https?:|ftp:|mailto:).*$"
+    english: "^'[A-Z|a-z]*'?$"
+    pinyin_simp: "^u[a-z']*'?$"
+    quanpinerfen: "^v[a-z']*'?$"
+    jsq: "^=[^;']+$"
+
+
+topup:
+  __include: "layout/topup"
+  min_length: 4
+  max_length: 6
+  auto_clear: true
+  min_length_danzi: 2
+  topup_command: true
+
