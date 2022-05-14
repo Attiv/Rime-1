@@ -325,6 +325,7 @@ local function serialize(obj)
   elseif type == "string" then
     return '"'..obj..'"'
   elseif type == "table" then
+
     local str = "{"
     local i = 1
     for k, v in pairs(obj) do
@@ -347,19 +348,26 @@ local greedy = true
 
 local function calculator_translator(input, seg)
   if string.sub(input, 1, 1) ~= "=" then return end
+
+  if string.sub(input,-2,2)=="//" then 
+    input = string.sub(input,-1,-2).."("
+
+  end
   
   local expfin = greedy or string.sub(input, -1, -1) == ";"
   local exp = (greedy or not expfin) and string.sub(input, 2, -1) or string.sub(input, 2, -2)
+  -- yield(Candidate("123123",seg.start, seg._end, ""..exp, "表達式111",9))
   
   -- 空格輸入可能
   exp = exp:gsub("#", " ")
   
 -- yield(Candidate("number", seg.start, seg._end, exp, "表達式"))
 
-  if string.sub(input, -1) == "/" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
-  if string.sub(input, -1) == "*" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
-  if string.sub(input, -1) == "-" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
-  if string.sub(input, -1) == "+" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
+  -- if string.sub(input, -1) == "/" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
+  -- if string.sub(input, -1) == "*" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
+  -- if string.sub(input, -1) == "-" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
+  -- if string.sub(input, -1) == "+" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
+  -- if string.sub(input, -1) == "(" then yield(Candidate("number", seg.start, seg._end, "", "表達式")) return end
   
   if not expfin then return end
   
@@ -377,13 +385,19 @@ local function calculator_translator(input, seg)
   
   -- 防止危險操作，禁用os和io命名空間
   if expe:find("i?os?%.") then return end
+
+  yield(Candidate("text",seg.start, seg._end, expe, "表達式"))
+  local result  = load("return "..expe)()
   -- return語句保證了只有合法的Lua表達式才可執行
-  local result = load("return "..expe)()
-  if result == nil then return end
+  if result == nil then  return end
+  
+
+  -- if result == false then yield(Candidate("text",seg.start, seg._end, expe, "表達式")) return end
   
   result = serialize(result)
-  yield(Candidate("number", seg.start, seg._end, exp.."="..result, "等式"))
+  yield(Candidate("number", seg.start, seg._end, exp.."="..result, "等式","123"))
   yield(Candidate("number", seg.start, seg._end, result, "答案"))
+
 end
 
 return calculator_translator

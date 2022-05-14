@@ -1,4 +1,4 @@
-﻿# Rime schema settings
+# Rime schema settings
 # encoding: utf-8
 
 schema:
@@ -176,13 +176,14 @@ engine:
     # - lua_filter@hint_filter
     - lua_filter@xkjd6_filter
     - reverse_lookup_filter@danzi_lookup
+    # - lua_filter@preedit_filter
 
 
 
 speller:
   algebra:
     __include: "layout/algebra"
-  auto_select: true
+  auto_select: false
   auto_select_unique_candidate: true #空码自动顶
   alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
   initials: "abcdefghijklmnopqrstuvwxyz;/=`"
@@ -300,8 +301,8 @@ key_binder:
   bindings:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
-    #- {accept: comma, send: Page_Up, when: has_menu} #句号翻页
-    #- {accept: period, send: Page_Down, when: has_menu}  #句号翻页
+    - {accept: comma, send: Page_Up, when: has_menu}
+    - {accept: period, send: Page_Down, when: has_menu}
     - { when: always, accept: F7, toggle: jffh }
     - { when: always, accept: "Control+period", toggle: ascii_punct }
     - {accept: semicolon, send: 2, when: has_menu} #分号次选
