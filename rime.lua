@@ -110,6 +110,7 @@ get_date = M.getdate
 oo_processor = M.ooprocessor
 oo_filter =M.oofilter
 --]]
+preedit_filter = require("preedit")
 
 
 openfly_shortcut_processor = require("openfly_shortcut_processor")
