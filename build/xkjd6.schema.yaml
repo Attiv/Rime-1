@@ -13,7 +13,7 @@ __build_info:
     symbols: 1649221174
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1652498656
+    xkjd6.schema: 1652602579
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -406,7 +406,7 @@ speller:
     - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/"
     - "derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/"
   alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
-  auto_select: false
+  auto_select: true
   auto_select_unique_candidate: true
   initials: "abcdefghijklmnopqrstuvwxyz;/=`"
 switches:
