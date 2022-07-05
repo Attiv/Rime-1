@@ -1,0 +1,12 @@
+# Rime table
+#@/db_name	_xklbXY_user
+#@/db_type	tabledb
+#@/rime_version	1.7.3
+#@/tick	1
+了	lziiiiA1	2
+牛逼	nlbeioV2	2
+太牛逼了	tnbl	6
+太	tpooooB1	2
+太牛逼了	enctnbl	1
+太牛逼了	enctnblo	1
+太牛逼了	enctnbloi	1

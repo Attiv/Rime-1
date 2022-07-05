@@ -44,11 +44,15 @@ switches:
   - name: ascii_mode
     reset: 0
     states: [ 中, 英 ]
-  - name: full_shape
-    states: [ 半角, 全角 ]
+  #- name: full_shape
+  #   reset: 0
+  #  states: [ 半角, 全角 ]
   - name: jffh
     reset: 0
     states: [ 简体, 繁體 ]
+  - name: emoji_cn
+    reset: 1
+    states: [ 关闭emj, 开启emj ]
   - name: sbb_hint
     reset: 1 # 改成0默认关闭
     states: [ "关₆₃₀", "开₆₃₀" ]
@@ -151,6 +155,7 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
+    # - lua_translator@zztest
     - lua_translator@jisuanqi
     - lua_translator@xuanchongjsq
     - lua_translator@shijian
@@ -176,14 +181,13 @@ engine:
     # - lua_filter@hint_filter
     - lua_filter@xkjd6_filter
     - reverse_lookup_filter@danzi_lookup
-    # - lua_filter@preedit_filter
 
 
 
 speller:
   algebra:
     __include: "layout/algebra"
-  auto_select: true
+  auto_select: false
   auto_select_unique_candidate: true #空码自动顶
   alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
   initials: "abcdefghijklmnopqrstuvwxyz;/=`"
