@@ -187,7 +187,7 @@ engine:
 speller:
   algebra:
     __include: "layout/algebra"
-  auto_select: false
+  auto_select: true
   auto_select_unique_candidate: true #空码自动顶
   alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
   initials: "abcdefghijklmnopqrstuvwxyz;/=`"
