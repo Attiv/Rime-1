@@ -8,7 +8,7 @@ schema:
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
-    朙月拼音＋MSPY雙拼方案。
+    微软双拼,需要配合微软主题
   dependencies:
     - stroke
 
@@ -19,8 +19,8 @@ switches:
   - name: full_shape
     states: [ 半角, 全角 ]
   - name: simplification
-    reset: 1
     states: [ 漢字, 汉字 ]
+    reset: 1
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -149,3 +149,7 @@ recognizer:
   import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*'?$"
+
+style:
+  theme_name: microsoft
+

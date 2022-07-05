@@ -13,7 +13,7 @@ __build_info:
     symbols: 1649221174
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1656654272
+    xkjd6.schema: 1656572484
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -406,18 +406,19 @@ speller:
     - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/"
     - "derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/"
   alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
-  auto_select: true
+  auto_select: false
   auto_select_unique_candidate: true
   initials: "abcdefghijklmnopqrstuvwxyz;/=`"
 switches:
   - name: ascii_mode
     reset: 0
     states: ["中", "英"]
-  - name: full_shape
-    states: ["半角", "全角"]
   - name: jffh
     reset: 0
     states: ["简体", "繁體"]
+  - name: emoji_cn
+    reset: 1
+    states: ["关闭emj", "开启emj"]
   - name: sbb_hint
     reset: 1
     states: ["关₆₃₀", "开₆₃₀"]
