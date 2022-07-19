@@ -13,7 +13,7 @@ __build_info:
     symbols: 1649221174
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1658129359
+    xkjd6.schema: 1658198927
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -408,7 +408,7 @@ switches:
   - options: ["_key_'"]
     states: ["造词"]
   - name: emoji_cn
-    reset: 0
+    reset: 1
     states: ["关闭emj", "开启emj"]
   - name: ascii_punct
     states: ["。，", "．，"]
