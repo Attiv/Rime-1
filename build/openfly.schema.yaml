@@ -1,13 +1,13 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.5.3
   timestamps:
-    default: 1613228859
-    default.custom: 1651054080
-    key_bindings: 1631897798
+    default: 1561218646
+    default.custom: 1658653394
+    key_bindings: 1653213511
     key_bindings.custom: 0
-    openfly.custom: 1638772695
-    openfly.schema: 1637765275
-    punctuation: 1613228859
+    openfly.custom: 1653213511
+    openfly.schema: 1653213511
+    punctuation: 1561218646
     punctuation.custom: 0
 engine:
   filters:

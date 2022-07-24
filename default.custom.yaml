@@ -44,8 +44,8 @@ patch:
     Caps_Lock: null
     Control_L: noop
     Control_R: noop
-    Shift_L: null
-    Shift_R: null
+    Shift_L: commit_code   
+    Shift_R: inline_ascii
   schema_list:
   - schema: openfly
   - schema: xhup
