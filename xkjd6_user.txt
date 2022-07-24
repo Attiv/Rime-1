@@ -1,0 +1,96 @@
+# Rime table
+#@/db_name	xkjd6_user.txt
+#@/db_type	tabledb
+#@/rime_version	1.5.3
+#@/tick	100
+那	a	6
+Vitta	avt	31
+附属医院	feyy	1
+周口	fk	11
+窒	fkoo	1
+周口	fkui	16
+这样加词	fyjc	21
+胡娜	hnua	16
+狠	hnuaav	1
+尽	jba	11
+竞	jgovo	1
+竞秀	jgxq	15
+简单	jmdf	6
+龙	ly	11
+妙	mca	18
+灭	mdv	11
+灭尽龙	mjl	101
+妙妙妙	mmm	38
+品质	pu	1
+求	qq	1
+QQ空间	qqkj	21
+他	t	1
+有	v	1
+有他	vt	5
+王沐歆	wmx	1
+冲	wy	1
+埫	wyvo	1
+王宥	wyvo	16
+小石榴	xel	11
+秀	xqu	1
+宥宥	yy	46
+用	yy	6
+嗞	zkoo	1
+郑州	zz	16
+郑州	zzzz	1
+那周口	encafk	1
+那周口	encafo	1
+那周口	encaok	1
+那周口	encaoo	1
+竞秀	encjgop	1
+竞秀	encjgx	1
+竞秀	encjgxq	1
+竞秀	encjgxqo	1
+竞秀	encjgxqou	1
+灭尽龙	encmjlv	1
+灭尽龙	encmjlva	1
+灭尽龙	encmjlvav	1
+灭尽龙	encmjov	1
+妙妙妙	encmmma	1
+妙妙妙	encmmmaa	1
+妙妙妙	encmmmaaa	1
+妙妙妙	encmmoa	1
+灭尽龙	encmolv	1
+妙妙妙	encmoma	1
+妙妙妙	encmooa	1
+灭尽龙	encmoov	1
+那周口	encnfka	1
+那周口	encnfoa	1
+那周口	encnoka	1
+那周口	encnooa	1
+灭尽龙	encojlm	1
+灭尽龙	encojom	1
+妙妙妙	encommm	1
+妙妙妙	encomom	1
+用品质	encoofy	1
+灭尽龙	encoolm	1
+妙妙妙	encoomm	1
+妙妙妙	encooom	1
+灭尽龙	encooom	1
+用品质	encoooy	1
+用品质	encopfy	1
+有他	encopop	1
+竞秀	encopop	1
+用品质	encopoy	1
+有他	encopt	1
+有他	encopts	1
+竞秀	encopxq	1
+有他	encvop	1
+有他	encvt	1
+有他	encvts	1
+有他	encydop	1
+有他	encydt	1
+有他	encydts	1
+用品质	encyof	1
+用品质	encyofu	1
+用品质	encyoo	1
+用品质	encyoou	1
+用品质	encypf	1
+用品质	encypfu	1
+用品质	encypo	1
+用品质	encypou	1

@@ -57,7 +57,7 @@ engine:
     - reverse_lookup_translator
  #拼写运算规则
 speller:
-  auto_select: true
+  auto_select: false
   alphabet: "zyxwvutsrqponmlkjihgfedcba;"
   initials: "abcdefghijklmnopqrstuvwxyz;"
   

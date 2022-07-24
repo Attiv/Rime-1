@@ -7,6 +7,19 @@ name: xkjd6.extended
 version: "Q1"
 sort: original 
 use_preset_vocabulary: false
+columns:
+  - text
+  - code
+  - stem
+  - weight
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaAc"
+    - length_in_range: [4, 99]
+      formula: "AaBaCaZa"
 import_tables:
 # ---------------------------------------
 # 下列为扩展 可选码表内容：
@@ -49,6 +62,8 @@ import_tables:
 
 ## 自定义词库：自己做的词库，自己维护
   - xkjd6.gbk
+  - xkjd6.zidingyi
+  # - jdl_Z
 
 # =======================================
 ### 外挂词库

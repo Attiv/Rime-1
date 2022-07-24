@@ -13,7 +13,7 @@ __build_info:
     symbols: 1649221174
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1652602579
+    xkjd6.schema: 1658198927
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -26,39 +26,23 @@ custom_phrase:
   db_class: stabledb
   dictionary: ""
   enable_sentence: false
-  initial_quality: 0
-  user_dict: user_dict
-danzi_lookup:
-  comment_format:
-    - "xform/^/〔/"
-    - "xform/$/〕/"
-    - "xform/ /, /"
-  dictionary: xkjd6.extended
-  enable_charset_filter: false
-  enable_completion: true
-  enable_encoder: false
-  enable_sentence: false
-  enable_user_dict: false
-  encode_commit_history: true
-  overwrite_comment: true
-  tags:
-    - danzi_lookup
+  user_dict: custom_phrase
 emoji_cn:
   opencc_config: emoji.json
   option_name: emoji_cn
   tips: all
 engine:
   filters:
-    - uniquifier
+    - simplifier
     - "reverse_lookup_filter@pinyin_simp_lookup"
     - "reverse_lookup_filter@quanpinerfen_lookup"
     - "simplifier@emoji_cn"
     - "simplifier@jffh"
-    - "simplifier@ascii_punct"
     - "simplifier@bmms"
     - "simplifier@EN2en"
+    - "simplifier@ascii_punct"
     - "lua_filter@xkjd6_filter"
-    - "reverse_lookup_filter@danzi_lookup"
+    - uniquifier
   processors:
     - "lua_processor@xuanchongjsq"
     - ascii_composer
@@ -76,6 +60,7 @@ engine:
     - matcher
     - "affix_segmentor@pinyin_simp"
     - "affix_segmentor@quanpinerfen"
+    - "affix_segmentor@xkjdWXYZ"
     - abc_segmentor
     - punct_segmentor
     - fallback_segmentor
@@ -84,11 +69,17 @@ engine:
     - "lua_translator@xuanchongjsq"
     - "lua_translator@shijian"
     - punct_translator
+    - table_translator
+    - reverse_lookup_translator
+    - "table_translator@custom_phrase"
+    - "table_translator@xkjdWXYZ"
+    - "table_translator@xkjdYY"
+    - "table_translator@xkjdZZ"
+    - "table_translator@xkjdWW"
+    - "table_translator@xkjd6_user"
+    - "lua_translator@number_translator"
     - "history_translator@repeat_history"
     - "history_translator@repeat_history2"
-    - "table_translator@custom_phrase"
-    - "table_translator@danzi_lookup"
-    - "lua_translator@number_translator"
     - "script_translator@quanpinerfen"
     - "script_translator@pinyin_simp"
 jffh:
@@ -96,14 +87,16 @@ jffh:
   option_name: jffh
 key_binder:
   bindings:
+    - {accept: "Shift+space", send: space, when: composing}
+    - {accept: ";", send: 2, when: composing}
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
     - {accept: comma, send: Page_Up, when: has_menu}
     - {accept: period, send: Page_Down, when: has_menu}
+    - {accept: F6, select: .next, when: always}
     - {accept: F7, toggle: jffh, when: always}
-    - {accept: "Control+period", toggle: ascii_punct, when: always}
-    - {accept: semicolon, send: 2, when: has_menu}
-    - {accept: apostrophe, send: 3, when: has_menu}
+    - {accept: "'", send: 2, when: has_menu}
     - {accept: "&", toggle: emoji_cn, when: has_menu}
     - {accept: "^", toggle: bmms, when: has_menu}
     - {accept: KP_0, send: 0, when: has_menu}
@@ -360,17 +353,17 @@ quanpinerfen_lookup:
   tags:
     - quanpinerfen
 recognizer:
+  import_preset: default
   patterns:
-    danzi_lookup: "[a-z`]*`+[a-z`]*"
-    email: "^[a-z][-_.0-9a-z]*@.*$"
-    english: "^'[A-Z|a-z]*'?$"
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
     jsq: "^=[^;']+$"
-    pinyin: "(?<![`A-Z])`[a-z']*;?$"
     pinyin_simp: "^u[a-z']*'?$"
     punct: "^/([0-9]0?|[a-z]+)$"
     quanpinerfen: "^v[a-z']*'?$"
+    reverse_lookup: "[a-z`]*`+[a-z`]*"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
-    url: "^(www[.]|https?:|ftp:|mailto:).*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+    xkjdWXYZ: "^a['/a-z][a-z,./:?!']*'?$"
 repeat_history:
   initial_quality: 10000
   input: i
@@ -383,10 +376,9 @@ reverse_lookup:
   comment_format:
     - "xform/^/〔/"
     - "xform/$/〕/"
+    - "xform/ /, /"
   dictionary: xkjd6cx
 schema:
-  author:
-    - "发明人 大牛"
   dependencies:
     - xkjd6cx
     - pinyin_simp
@@ -396,33 +388,28 @@ schema:
   version: 1
 speller:
   algebra:
-    - "derive/^[bcdefghjklmnpqrstwxyz;]([bcdefghjklmnpqrstwxyz;][avuio].*)$/`$1/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;])[bcdefghjklmnpqrstwxyz;]([avuio].*)$/$1`$2/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;`]{2})[avuio](.*)$/$1`$2/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]).(.*)$/$1`$2/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{2}).(.*)$/$1`$2/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{3}).(.*)$/$1`$2/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{4}).(.*)$/$1`$2/"
-    - "derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/"
-    - "derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/"
-  alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
+    - "derive/[0-9]$//"
+    - "derive|^;|/|"
+  alphabet: "zyxwvutsrqponmlkjihgfedcba;"
   auto_select: true
-  auto_select_unique_candidate: true
-  initials: "abcdefghijklmnopqrstuvwxyz;/=`"
+  delimiter: " '"
+  initials: "abcdefghijklmnopqrstuvwxyz;"
 switches:
   - name: ascii_mode
     reset: 0
-    states: ["中", "英"]
+    states: ["中文", "西文"]
   - name: full_shape
     states: ["半角", "全角"]
   - name: jffh
     reset: 0
     states: ["简体", "繁體"]
-  - name: sbb_hint
-    reset: 1
-    states: ["关₆₃₀", "开₆₃₀"]
   - name: EN2en
     reset: 1
+  - options: ["_key_'"]
+    states: ["造词"]
+  - name: emoji_cn
+    reset: 1
+    states: ["关闭emj", "开启emj"]
   - name: ascii_punct
     states: ["。，", "．，"]
 topup:
@@ -434,6 +421,8 @@ topup:
   topup_this: bcdefghjklmnpqrstwxyz
   topup_with: "avuio;"
 translator:
+  comment_format:
+    - "xform/[0-9]//"
   dictionary: xkjd6.extended
   enable_charset_filter: false
   enable_completion: true
@@ -441,4 +430,82 @@ translator:
   enable_sentence: false
   enable_user_dict: false
   encode_commit_history: true
+  initial_quality: 0
   max_phrase_length: 6
+xkjd6_user:
+  comment_format:
+    - "xform/[0-9]//"
+  db_class: stabledb
+  dictionary: ""
+  enable_completion: true
+  enable_sentence: false
+  initial_quality: "-1"
+  user_dict: xkjd6_user
+xkjdWW:
+  comment_format:
+    - "xform|1|_|"
+  db_class: tabledb
+  dictionary: xkjd_W
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: false
+  preedit_format:
+    - "xform|1|_|"
+  prefix: "~T"
+  tag: xkjdWW
+  tips: "〔W〕"
+  user_dict: xkjd6_user
+xkjdWXYZ:
+  comment_format:
+    - "xform|1|_|"
+  db_class: tabledb
+  dictionary: xkjd6.extended
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: false
+  preedit_format:
+    - "xform|1|_|"
+  prefix: a
+  tag: xkjdWXYZ
+  tips: "〔造词〕"
+  user_dict: xkjd6_user
+xkjdYY:
+  comment_format:
+    - "xform|1|_|"
+  db_class: tabledb
+  dictionary: xkjd_Y
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: false
+  preedit_format:
+    - "xform|1|_|"
+  prefix: "~E"
+  tag: xkjdYY
+  tips: "〔Y〕"
+  user_dict: xkjd6_user
+xkjdZZ:
+  comment_format:
+    - "xform|1|_|"
+  db_class: tabledb
+  dictionary: xkjd_Z
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: false
+  preedit_format:
+    - "xform|1|_|"
+  prefix: "~R"
+  tag: xkjdZZ
+  tips: "〔Z〕"
+  user_dict: xkjd6_user
