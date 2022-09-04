@@ -15,21 +15,20 @@ sort: original
 ↓	;cx
 、	;d
 [	;e
-#f被用作重复
-“	;g
-”	;h
+#;f被用做了重复，i键也是
+<	;g
+>	;h
 《	;i
 “	;t
 （	;k
 ）	;l
-】	;m
-【	;n
+{	;m
+}	;n
 》	;o
 ——	;p
 ~	;q
 ]	;r
 ……	;s
-
 ctrl+z	;u
 =	;v
 ？	;w
@@ -43,21 +42,22 @@ ____	;z
 、	od
 （	ok
 ）	ol
-
+``	of
+<	og
+>	oh
 [	oe
 ]	or
 “	ot
 ”	oy
-《 oi
-》  oo
-
-→ ox 
-← oc
-↑ oce
-↓ ocx
-% ob
-【 on 
-】  om
+《	oi
+》	oo
+→	ox 
+←	oc
+↑	oce
+↓	ocx
+%	ob
+{	on 
+}	om
 
 
 # windows QQ表情
