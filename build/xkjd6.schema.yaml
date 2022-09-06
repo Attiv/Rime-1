@@ -10,10 +10,10 @@ __build_info:
     key_bindings.custom: 0
     punctuation: 1613228859
     punctuation.custom: 0
-    symbols: 1649221174
+    symbols: 1561211760
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1661941553
+    xkjd6.schema: 1662279564
 ascii_punct:
   option_name: ascii_punct
 bmms:
