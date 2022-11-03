@@ -5,7 +5,7 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1613228859
-    default.custom: 1651054080
+    default.custom: 1667442157
     key_bindings: 1631897798
     key_bindings.custom: 0
     punctuation: 1613228859
@@ -13,7 +13,7 @@ __build_info:
     symbols: 1561211760
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1662473388
+    xkjd6.schema: 1667442355
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -88,7 +88,8 @@ jffh:
 key_binder:
   bindings:
     - {accept: "Shift+space", send: space, when: composing}
-    - {accept: ";", send: 2, when: composing}
+    - {accept: semicolon, send: 2, when: has_menu}
+    - {accept: apostrophe, send: 3, when: has_menu}
     - {accept: "Control+period", toggle: ascii_punct, when: always}
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
@@ -96,19 +97,18 @@ key_binder:
     - {accept: period, send: Page_Down, when: has_menu}
     - {accept: F6, select: .next, when: always}
     - {accept: F7, toggle: jffh, when: always}
-    - {accept: "'", send: 2, when: has_menu}
     - {accept: "&", toggle: emoji_cn, when: has_menu}
     - {accept: "^", toggle: bmms, when: has_menu}
-    - {accept: KP_0, send: 0, when: has_menu}
-    - {accept: KP_1, send: 1, when: has_menu}
-    - {accept: KP_2, send: 2, when: has_menu}
-    - {accept: KP_3, send: 3, when: has_menu}
-    - {accept: KP_4, send: 4, when: has_menu}
-    - {accept: KP_5, send: 5, when: has_menu}
-    - {accept: KP_6, send: 6, when: has_menu}
-    - {accept: KP_7, send: 7, when: has_menu}
-    - {accept: KP_8, send: 8, when: has_menu}
-    - {accept: KP_9, send: 9, when: has_menu}
+    - {accept: KP_0, send: 0, when: composing}
+    - {accept: KP_1, send: 1, when: composing}
+    - {accept: KP_2, send: 2, when: composing}
+    - {accept: KP_3, send: 3, when: composing}
+    - {accept: KP_4, send: 4, when: composing}
+    - {accept: KP_5, send: 5, when: composing}
+    - {accept: KP_6, send: 6, when: composing}
+    - {accept: KP_7, send: 7, when: composing}
+    - {accept: KP_8, send: 8, when: composing}
+    - {accept: KP_9, send: 9, when: composing}
     - {accept: KP_Subtract, send: "-", when: has_menu}
     - {accept: KP_Divide, send: "/", when: has_menu}
     - {accept: KP_Multiply, send: "*", when: has_menu}
@@ -391,7 +391,7 @@ speller:
     - "derive/[0-9]$//"
     - "derive|^;|/|"
   alphabet: "zyxwvutsrqponmlkjihgfedcba;"
-  auto_select: true
+  auto_select: false
   delimiter: " '"
   initials: "abcdefghijklmnopqrstuvwxyz;"
 switches:

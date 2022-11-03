@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.7.3
   timestamps:
     default: 1613228859
-    default.custom: 1651054080
+    default.custom: 1667442157
     key_bindings: 1631897798
     key_bindings.custom: 0
     punctuation: 1613228859
@@ -18,7 +18,7 @@ key_binder:
     - {accept: bracketleft, send: Page_Up, when: has_menu}
     - {accept: bracketright, send: Page_Down, when: has_menu}
     - {accept: ";", send: 2, when: composing}
-    - {accept: comma, send: 2, when: composing}
+    - {accept: comma, send: 3, when: composing}
     - {accept: Tab, send: Escape, when: composing}
     - {accept: "Release+semicolon", send: semicolon, when: composing}
     - {accept: "Release+comma", send: comma, when: composing}
