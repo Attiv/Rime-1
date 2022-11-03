@@ -13,7 +13,7 @@ __build_info:
     symbols: 1561211760
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1667442669
+    xkjd6.schema: 1667481090
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -95,8 +95,6 @@ key_binder:
     - {accept: equal, send: Page_Down, when: has_menu}
     - {accept: comma, send: Page_Up, when: has_menu}
     - {accept: period, send: Page_Down, when: has_menu}
-    - {accept: bracketleft, send: Page_Up, when: has_menu}
-    - {accept: bracketright, send: Page_Down, when: has_menu}
     - {accept: F6, select: .next, when: always}
     - {accept: F7, toggle: jffh, when: always}
     - {accept: "&", toggle: emoji_cn, when: has_menu}
