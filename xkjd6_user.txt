@@ -2,7 +2,7 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	268
+#@/tick	277
 那	a	6
 Vitta	avt	31
 办公	bfgy	1
@@ -21,7 +21,7 @@ Vitta	avt	31
 观澜郡	glja	10
 观	gta	1
 观澜郡	gta lfao jwava	1
-孤勇者	gyfa	5
+孤勇者	gyfa	10
 呵呵	hehe	22
 红红火火	hhhha	7
 胡	hj	1
@@ -48,7 +48,7 @@ Vitta	avt	31
 立	lko	1
 拉	ls	6
 龙	ly	16
-龙湖	lyhj	30
+龙湖	lyhj	40
 佬	lziuo	1
 妙	mca	18
 灭	mdv	11
@@ -62,6 +62,7 @@ Vitta	avt	31
 品质	pu	1
 求	qq	6
 QQ空间	qqkj	21
+郑	qrou	6
 热热	rere	2
 三	s	1
 斯	skvi	1
@@ -77,6 +78,9 @@ QQ空间	qqkj	21
 埫	wyvo	1
 王宥	wyvo	21
 新	xb	1
+新	xbovuu	6
+新政	xbqr	1
+新郑	xbqr	20
 硝	xcvu	1
 小石榴	xel	151
 秀	xqu	1
@@ -197,10 +201,12 @@ QQ空间	qqkj	21
 拉挎	encopkq	1
 彦祖	encopop	1
 拉挎	encopop	1
+新郑	encopop	1
 有他	encopop	1
 竞秀	encopop	1
 龙湖	encopop	1
 用品质	encopoy	1
+新郑	encopqr	1
 有他	encopt	1
 有他	encopts	1
 竞秀	encopxq	1
@@ -214,6 +220,8 @@ QQ空间	qqkj	21
 王立坤	encwlov	1
 王立坤	encwokv	1
 王立坤	encwoov	1
+新郑	encxbop	1
+新郑	encxbqr	1
 有他	encydop	1
 有他	encydt	1
 有他	encydts	1
