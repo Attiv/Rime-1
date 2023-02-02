@@ -42,6 +42,10 @@ style:
   preedit_type: preview
   sound: "10_key_press_click.caf"
 
+preset_color_schemes:
+  default:
+    hilited_candidate_back_color: '0xffffff'
+
 #键盘布局
 preset_keyboards:
   default:

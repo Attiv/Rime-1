@@ -1,13 +1,13 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.8.4
   timestamps:
-    default: 1613228859
+    default: 1675085450
     default.custom: 1667442157
     key_bindings: 1631897798
     key_bindings.custom: 0
     pinyin_simp.custom: 0
     pinyin_simp.schema: 1630842168
-    punctuation: 1613228859
+    punctuation: 1675085450
     punctuation.custom: 0
 engine:
   processors:
@@ -157,7 +157,7 @@ schema:
     - "佚名"
   description: |
     源自 Android 拼音
-    
+
   name: "袖珍简化字拼音"
   schema_id: pinyin_simp
   version: 0.8

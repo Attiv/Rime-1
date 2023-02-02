@@ -1,13 +1,13 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.8.4
   timestamps:
-    default: 1613228859
+    default: 1675085450
     default.custom: 1667442157
     key_bindings: 1631897798
     key_bindings.custom: 0
     liangfen.custom: 0
     liangfen.schema: 1644308980
-    punctuation: 1613228859
+    punctuation: 1675085450
     punctuation.custom: 0
 engine:
   filters:
@@ -160,7 +160,7 @@ schema:
     Use《http://yedict.com/》
     http://yedict.com/
     Dict is from http://yedict.com/
-    
+
   name: LiangFen
   schema_id: liangfen
   version: 4.0
