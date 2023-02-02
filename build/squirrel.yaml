@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.8.4
   timestamps:
     squirrel: 1675085450
-    squirrel.custom: 1675318529
+    squirrel.custom: 1675342885
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -272,24 +272,48 @@ preset_color_schemes:
     name: lamb
     text_color: 0x333333
     translucency: true
+  mac_dark:
+    author: lamb
+    back_color: 0x00000000
+    blur: true
+    border_color_width: 0
+    border_height: 4
+    border_width: 4
+    candidate_back_color: 0xD05B21
+    candidate_format: "%c %@  "
+    candidate_text_color: 0xffffff
+    corner_radius: 5
+    font_face: "汉仪正圆"
+    font_point: 16
+    hilited_candidate_back_color: 0xD05B21
+    hilited_candidate_label_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_corner_radius: 5
+    hilited_text_color: 0xffffff
+    horizontal: true
+    inline_preedit: true
+    label_color: 0xffffff
+    label_font_point: 14
+    name: lamb
+    text_color: 0x333333
+    translucency: true
   mojave_dark:
     author: "xiehuc <xiehuc@gmail.com>"
-    back_color: 0x252320
-    border_color: 0x020202
+    back_color: 0x3c3c3c
+    border_color: 0x3c3c3c
     border_color_width: 0
     border_height: 6
-    border_width: 6
+    border_width: 12
     candidate_format: "%c %@"
     candidate_text_color: 0xdedddd
     comment_text_color: 0xdedddd
     corner_radius: 5
     font_face: PingFangSC
-    font_point: 16
-    hilited_back_color: 0x252320
-    hilited_candidate_back_color: 0xcb5d00
-    hilited_candidate_label_color: 0xffffff
-    hilited_candidate_text_color: 0xffffff
-    hilited_corner_radius: 3
+    font_point: 18
+    hilited_back_color: 0x3c3c3c
+    hilited_candidate_label_color: 0xefefef
+    hilited_candidate_text_color: 0xefefef
+    hilited_corner_radius: 0
     hilited_text_color: 0xdedddd
     horizontal: true
     inline_preedit: true
@@ -379,4 +403,5 @@ preset_color_schemes:
 show_notifications_when: appropriate
 style:
   color_scheme: mac
+  color_scheme_dark: mac_dark
   translucency: true
