@@ -1,8 +1,8 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.8.4
   timestamps:
-    squirrel: 1613228858
-    squirrel.custom: 1657895790
+    squirrel: 1675085450
+    squirrel.custom: 1675318529
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -53,6 +53,7 @@ com.apple.Finder:
 com.sublimetext.3:
   ascii_mode: false
 config_version: 0.37
+keyboard_layout: default
 preset_color_schemes:
   Win10:
     back_color: 0xffffff
@@ -145,6 +146,28 @@ preset_color_schemes:
     label_font_point: 18
     name: "简约白／Clean White"
     text_color: 0x808080
+  dark_saber:
+    author: Ivan
+    back_color: 0x00000000
+    candidate_back_color: 0xd4d4d4
+    candidate_list_layout: linear
+    candidate_text_color: 0x444444
+    color_space: display_p3
+    comment_text_color: 0x808080
+    corner_radius: 3.0
+    font_face: pingfangsc
+    font_point: 14
+    hilited_candidate_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafaf9
+    hilited_candidate_text_color: 0xfafafa
+    hilited_comment_text_color: 0xfafafa
+    hilited_text_color: 0xeeeeee
+    label_color: 0xe54f4f4f
+    label_font_face: skia
+    label_font_point: 14
+    name: "暗剑 / dark saber"
+    text_color: 0x000000
+    text_orientation: horizontal
   dark_temple:
     author: "佛振 <chen.sst@gmail.com>, based on ir_black"
     back_color: 0x222222
@@ -227,11 +250,12 @@ preset_color_schemes:
     text_color: 0xa5a5a5
   mac:
     author: lamb
-    back_color: 0xffffff
-    border_color: 0xffffff
+    back_color: 0x00000000
+    blur: true
     border_color_width: 0
     border_height: 4
     border_width: 4
+    candidate_back_color: 0xD05B21
     candidate_format: "%c %@  "
     candidate_text_color: 0x333333
     corner_radius: 5
@@ -247,6 +271,7 @@ preset_color_schemes:
     label_font_point: 14
     name: lamb
     text_color: 0x333333
+    translucency: true
   mojave_dark:
     author: "xiehuc <xiehuc@gmail.com>"
     back_color: 0x252320
@@ -354,4 +379,4 @@ preset_color_schemes:
 show_notifications_when: appropriate
 style:
   color_scheme: mac
-us_keyboard_layout: false
+  translucency: true

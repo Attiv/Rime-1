@@ -2,13 +2,13 @@ EN2en:
   opencc_config: EN2en.json
   option_name: EN2en
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.8.4
   timestamps:
-    default: 1613228859
+    default: 1675085450
     default.custom: 1667442157
     key_bindings: 1631897798
     key_bindings.custom: 0
-    punctuation: 1613228859
+    punctuation: 1675085450
     punctuation.custom: 0
     symbols: 1561211760
     symbols.custom: 0
