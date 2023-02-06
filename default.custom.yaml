@@ -47,15 +47,6 @@ patch:
     Shift_L: null
     Shift_R: null
   schema_list:
-  - schema: openfly
-  - schema: xhup
-  - schema: xhup_express
-  - schema: xhup_fluency
-  - schema: wubi86_jidian
-  - schema: numbers
-  - schema: wubi86_jidian_pinyin
-  - schema: wubi86_jidian_trad
-  - schema: wubi86_jidian_trad_pinyin
   - schema: xkjd6
   # - schema: double_pinyin_flypy
 __patch:
