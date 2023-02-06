@@ -1,0 +1,9 @@
+patch:
+  app_setting:
+    candidate_preedit_type: 3
+    is_tradition_chinese: 0
+    play_key_voice_volume: 1
+    is_show_candidate_comment: true
+    is_insert_symbol_auto_insert_candiate: false
+    theme_name: jd6
+    mark_text: true

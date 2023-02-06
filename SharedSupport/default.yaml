@@ -4,21 +4,9 @@
 config_version: "0.36"
 
 schema_list:
-  - schema: luna_pinyin
-  - schema: wubi_pinyin
-  - schema: double_pinyin_abc
   - schema: double_pinyin_flypy
-  - schema: double_pinyin_mspy
-  - schema: double_pinyin_pyjj
-  - schema: wubi86
-  - schema: wubi091
-  - schema: wubi98
-  - schema: flypy
-  - schema: jyutping
-  - schema: quick5
-  - schema: xqjz
-  - schema: xqzm
-  - schema: jiugong
+  - schema: xkjd6
+  
 
 switcher:
   caption: 〔方案選單〕
@@ -126,6 +114,11 @@ key_binder:
     # paging keys
     - { when: composing, accept: ISO_Left_Tab, send: Page_Up }
     - { when: composing, accept: Shift+Tab, send: Page_Up }
+    - { when: composing, accept: Tab, send: Page_Down }
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
     # hotkey switch
     - { when: always, accept: Control+Shift+1, select: .next }
     - { when: always, accept: Control+Shift+2, toggle: ascii_mode }

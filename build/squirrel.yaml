@@ -1,8 +1,8 @@
 __build_info:
-  rime_version: 1.7.3
+  rime_version: 1.8.5
   timestamps:
-    squirrel: 1613228858
-    squirrel.custom: 1612241938
+    squirrel: 1675621991
+    squirrel.custom: 1675390556
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -53,7 +53,48 @@ com.apple.Finder:
 com.sublimetext.3:
   ascii_mode: false
 config_version: 0.37
+keyboard_layout: default
 preset_color_schemes:
+  CatDark:
+    author: ProudCat
+    back_color: 0x242424
+    border_color: 0x00e0e0e0
+    candidate_back_color: 0x242424
+    candidate_shadow_color: 0x00000000
+    candidate_text_color: 0x99ffffff
+    comment_text_color: 0x55ffffff
+    hilited_back_color: 0x00d4d4d4
+    hilited_candidate_back_color: 0xfa3a0a
+    hilited_candidate_shadow_color: 0x00000000
+    hilited_candidate_text_color: 0xe5ffffff
+    hilited_comment_text_color: 0xc5c5c5
+    hilited_label_color: 0xe5ffffff
+    hilited_shadow_color: 0x00000000
+    hilited_text_color: 0x000000
+    label_color: 0x85ffffff
+    name: "Cat暗黑/CatDark"
+    shadow_color: 0x00000000
+    text_color: 0xe5ffffff
+  CatLight:
+    author: ProudCat
+    back_color: 0xf3f3f3
+    border_color: 0x00e0e0e0
+    candidate_back_color: 0xf3f3f3
+    candidate_shadow_color: 0x00000000
+    candidate_text_color: 0x4b4b4b
+    comment_text_color: 0x4b4b4b
+    hilited_back_color: 0x00d4d4d4
+    hilited_candidate_back_color: 0xff571f
+    hilited_candidate_shadow_color: 0x00000000
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xc5c5c5
+    hilited_label_color: 0xc5c5c5
+    hilited_shadow_color: 0x00000000
+    hilited_text_color: 0x000000
+    label_color: 0x4b4b4b
+    name: "Cat光明/CatLight"
+    shadow_color: 0x00000000
+    text_color: 0x000000
   Win10:
     back_color: 0xffffff
     border_color: 0xcc8f29
@@ -145,6 +186,28 @@ preset_color_schemes:
     label_font_point: 18
     name: "简约白／Clean White"
     text_color: 0x808080
+  dark_saber:
+    author: Ivan
+    back_color: 0x00000000
+    candidate_back_color: 0xd4d4d4
+    candidate_list_layout: linear
+    candidate_text_color: 0x444444
+    color_space: display_p3
+    comment_text_color: 0x808080
+    corner_radius: 3.0
+    font_face: pingfangsc
+    font_point: 14
+    hilited_candidate_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafaf9
+    hilited_candidate_text_color: 0xfafafa
+    hilited_comment_text_color: 0xfafafa
+    hilited_text_color: 0xeeeeee
+    label_color: 0xe54f4f4f
+    label_font_face: skia
+    label_font_point: 14
+    name: "暗剑 / dark saber"
+    text_color: 0x000000
+    text_orientation: horizontal
   dark_temple:
     author: "佛振 <chen.sst@gmail.com>, based on ir_black"
     back_color: 0x222222
@@ -227,11 +290,12 @@ preset_color_schemes:
     text_color: 0xa5a5a5
   mac:
     author: lamb
-    back_color: 0xffffff
-    border_color: 0xffffff
+    back_color: 0x00000000
+    blur: true
     border_color_width: 0
     border_height: 4
     border_width: 4
+    candidate_back_color: 0xD05B21
     candidate_format: "%c %@  "
     candidate_text_color: 0x333333
     corner_radius: 5
@@ -247,24 +311,49 @@ preset_color_schemes:
     label_font_point: 14
     name: lamb
     text_color: 0x333333
+    translucency: true
+  mac_dark:
+    author: lamb
+    back_color: 0x00000000
+    blur: true
+    border_color_width: 0
+    border_height: 4
+    border_width: 4
+    candidate_back_color: 0xD05B21
+    candidate_format: "%c %@  "
+    candidate_text_color: 0xffffff
+    corner_radius: 5
+    font_face: "汉仪正圆"
+    font_point: 16
+    hilited_candidate_back_color: 0xD05B21
+    hilited_candidate_label_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_corner_radius: 5
+    hilited_text_color: 0xffffff
+    horizontal: true
+    inline_preedit: true
+    label_color: 0xffffff
+    label_font_point: 14
+    name: lamb
+    text_color: 0x333333
+    translucency: true
   mojave_dark:
     author: "xiehuc <xiehuc@gmail.com>"
-    back_color: 0x252320
-    border_color: 0x020202
+    back_color: 0x3c3c3c
+    border_color: 0x3c3c3c
     border_color_width: 0
     border_height: 6
-    border_width: 6
+    border_width: 12
     candidate_format: "%c %@"
     candidate_text_color: 0xdedddd
     comment_text_color: 0xdedddd
     corner_radius: 5
     font_face: PingFangSC
-    font_point: 16
-    hilited_back_color: 0x252320
-    hilited_candidate_back_color: 0xcb5d00
-    hilited_candidate_label_color: 0xffffff
-    hilited_candidate_text_color: 0xffffff
-    hilited_corner_radius: 3
+    font_point: 18
+    hilited_back_color: 0x3c3c3c
+    hilited_candidate_label_color: 0xefefef
+    hilited_candidate_text_color: 0xefefef
+    hilited_corner_radius: 0
     hilited_text_color: 0xdedddd
     horizontal: true
     inline_preedit: true
@@ -354,4 +443,5 @@ preset_color_schemes:
 show_notifications_when: appropriate
 style:
   color_scheme: mac
-us_keyboard_layout: false
+  color_scheme_dark: mac_dark
+  translucency: true
