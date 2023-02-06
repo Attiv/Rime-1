@@ -1,0 +1,6 @@
+# Rime table
+#@/db_name	custom_phrase
+#@/db_type	tabledb
+#@/rime_version	1.7.3
+#@/tick	0
+我丟	wldqu	0

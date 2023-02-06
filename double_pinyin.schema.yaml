@@ -1,0 +1,149 @@
+# Rime schema
+# encoding: utf-8
+
+patch:
+  switches/@next:
+    
+  'engine/filters/@before 0':
+    
+
+
+schema:
+  schema_id: double_pinyin
+  name: 键双·红苦菜
+  version: "0.1"
+  author:
+    - 无名氏
+  description: |
+    朙月拼音＋自定义双拼方案。
+  dependencies:
+    - stroke
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: emoji_suggestion
+    reset: 1
+    states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    reset: 0
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - script_translator
+
+  filters:
+    - simplifier@emoji_suggestion
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: "bpmfdtnlgkhjqxerzcsywaoe,"
+  initials: "bpmfdtnlgkhjqxerzcsywaoe"
+  delimiter: " '"
+  algebra:
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - xform/^([aoe])(.*)$/$1$1$2/
+    - xform/^zh/F/
+    - xform/^ch/J/
+    - xform/^sh/E/
+    - xform/iang$/X/
+    - xform/uang$/X/
+    - xform/iong$/Y/
+    - xform/uang$/M/
+    - xform/ang$/P/
+    - xform/ong$/Y/
+    - xform/eng$/R/
+    - xform/ian$/M/
+    - xform/iao$/C/
+    - xform/ing$/G/
+    - xform/uai$/G/
+    - xform/uan$/T/
+    - xform/ai$/H/
+    - xform/an$/F/
+    - xform/ao$/Z/
+    - xform/ou$/D/
+    - xform/ei$/W/
+    - xform/en$/N/
+    - xform/er$/J/
+    - xform/ia$/S/
+    - xform/ie$/D/
+    - xform/in$/B/
+    - xform/iu$/Q/
+    - xform/ua$/Q/
+    - xform/ue$/H/
+    - xform/ui$/B/
+    - xform/un$/W/
+    - xform/uo$/L/
+    - xform/ve$/H/
+    - xform/a$/S/
+    - xform/o$/L/
+    - xform/i$/K/
+    - xform/u$/J/
+    - xform/v$/L/
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+
+translator:
+  dictionary: luna_pinyin
+  prism: double_pinyin
+  preedit_format:
+    - "xform/^/〔双〕/"
+
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+
+reverse_lookup:
+  dictionary: stroke
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
+  tips: 〔笔画〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+  comment_format:
+    - xform/([nl])v/$1ü/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    - { when: has_menu, accept: comma, send: comma }
+    - { when: has_menu, accept: period, send: period }
+    - { when: has_menu, accept: bracketleft, send: Prior }
+    - { when: has_menu, accept: bracketright, send: Next }
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
+
+
+  
