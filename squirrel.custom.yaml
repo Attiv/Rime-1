@@ -285,6 +285,7 @@ patch:
     mac:
       author: "lamb"
       name: "lamb"
+      hilited_comment_text_color: 0xffffff
       back_color: 0x00000000             #设置输入条的背景色，色值是按照BGR的形式16进制填写
       corner_radius: 5                  #设置输入条的圆角效果
       border_height: 4                  #设置输入条上下宽度
