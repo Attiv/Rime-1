@@ -46,6 +46,18 @@ patch:
     Control_R: noop
     Shift_L: null
     Shift_R: null
+  switches/@next:
+    name: emoji_cn
+    reset: 1
+    states: [ 关闭emj,开启emj  ]
+  'engine/filters/@before 0':
+    simplifier@emoji_cn
+  emoji_cn:
+    opencc_config: emoji.json
+    option_name: emoji_cn
+    tips: all
+
+
   schema_list:
   - schema: xkjd6
   # - schema: double_pinyin_flypy
