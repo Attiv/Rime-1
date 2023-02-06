@@ -2,7 +2,7 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	449
+#@/tick	476
 那	a	11
 Vitta	avt	31
 不	b	1
@@ -71,9 +71,9 @@ Vitta	avt	31
 妙	mca	18
 灭	mdv	11
 灭尽龙	mjl	101
-猫猫佬	mmlu	25
+猫猫佬	mmlu	110
 妙妙妙	mmm	38
-猫佬	mzlz	140
+猫佬	mzlz	150
 猫猫	mzmz	26
 猫	mzua	1
 你	n	6
@@ -88,7 +88,7 @@ QQ空间	qqkj	21
 郑	qrou	6
 热	re	1
 热热	rere	22
-热热佬	rrl	50
+热热佬	rrl	75
 三	s	1
 搜	sd	1
 俗	sji	1
@@ -104,12 +104,13 @@ QQ空间	qqkj	21
 冲	wy	1
 埫	wyvo	1
 王宥	wyvo	21
+而	x	1
 新	xb	1
 新	xbovuu	6
 新政	xbqr	1
 新郑	xbqr	75
 硝	xcvu	1
-小石榴	xel	216
+小石榴	xel	226
 现在	xmzh	1
 秀	xqu	1
 彦	yfovu	1

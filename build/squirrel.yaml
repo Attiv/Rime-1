@@ -1,8 +1,8 @@
 __build_info:
-  rime_version: 1.8.4
+  rime_version: 1.8.5
   timestamps:
-    squirrel: 1675085450
-    squirrel.custom: 1675342885
+    squirrel: 1675621991
+    squirrel.custom: 1675390556
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -55,6 +55,46 @@ com.sublimetext.3:
 config_version: 0.37
 keyboard_layout: default
 preset_color_schemes:
+  CatDark:
+    author: ProudCat
+    back_color: 0x242424
+    border_color: 0x00e0e0e0
+    candidate_back_color: 0x242424
+    candidate_shadow_color: 0x00000000
+    candidate_text_color: 0x99ffffff
+    comment_text_color: 0x55ffffff
+    hilited_back_color: 0x00d4d4d4
+    hilited_candidate_back_color: 0xfa3a0a
+    hilited_candidate_shadow_color: 0x00000000
+    hilited_candidate_text_color: 0xe5ffffff
+    hilited_comment_text_color: 0xc5c5c5
+    hilited_label_color: 0xe5ffffff
+    hilited_shadow_color: 0x00000000
+    hilited_text_color: 0x000000
+    label_color: 0x85ffffff
+    name: "Cat暗黑/CatDark"
+    shadow_color: 0x00000000
+    text_color: 0xe5ffffff
+  CatLight:
+    author: ProudCat
+    back_color: 0xf3f3f3
+    border_color: 0x00e0e0e0
+    candidate_back_color: 0xf3f3f3
+    candidate_shadow_color: 0x00000000
+    candidate_text_color: 0x4b4b4b
+    comment_text_color: 0x4b4b4b
+    hilited_back_color: 0x00d4d4d4
+    hilited_candidate_back_color: 0xff571f
+    hilited_candidate_shadow_color: 0x00000000
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xc5c5c5
+    hilited_label_color: 0xc5c5c5
+    hilited_shadow_color: 0x00000000
+    hilited_text_color: 0x000000
+    label_color: 0x4b4b4b
+    name: "Cat光明/CatLight"
+    shadow_color: 0x00000000
+    text_color: 0x000000
   Win10:
     back_color: 0xffffff
     border_color: 0xcc8f29
