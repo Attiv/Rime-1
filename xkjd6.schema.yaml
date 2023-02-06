@@ -43,7 +43,10 @@ switches:
 
   - options: [_key_']
     states: [造词]
-
+  # - name: emoji_suggestion
+  #   reset: 0
+  #   states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+    
   - name: emoji_cn   #Emoji开关
     reset: 1              # 1为默认开启
     states: [ 关闭emj,开启emj  ]
@@ -165,10 +168,8 @@ engine:
     - script_translator@pinyin_simp
   filters:
     - lua_filter@hint_filter # 頂功提示過濾 switches/completion = 1
-    - simplifier
-    - reverse_lookup_filter@pinyin_simp_lookup
-    - reverse_lookup_filter@quanpinerfen_lookup
     - simplifier@emoji_cn
+    - simplifier
     - simplifier@jffh
     - simplifier@bmms
     - simplifier@EN2en
@@ -176,6 +177,8 @@ engine:
     - lua_filter@xkjd6_filter
     - lua_filter@preedit_filter
     - uniquifier
+    - reverse_lookup_filter@pinyin_simp_lookup
+    - reverse_lookup_filter@quanpinerfen_lookup
 
 speller:
   auto_select: false
@@ -185,6 +188,12 @@ speller:
   algebra: 
     - derive/[0-9]$//  #无数字
     - derive|^;|/|
+
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+
 
 translator:
   dictionary: xkjd6.extended
@@ -350,7 +359,7 @@ key_binder:
     - { when: always, accept: F6, select: .next }
     - { when: always, accept: F7, toggle: jffh }
     # - { when: has_menu, accept: "'", send: 2 }
-    - { when: has_menu, accept: "&", toggle: emoji_cn}
+    # - { when: has_menu, accept: "&", toggle: emoji_cn}
     - { when: has_menu, accept: "^", toggle: bmms}
     - {accept: KP_0, send: 0, when: composing}
     - {accept: KP_1, send: 1, when: composing}
