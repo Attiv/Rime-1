@@ -49,7 +49,9 @@ switches:
     states: [ 关闭emj,开启emj  ]
   - name: ascii_punct
     states: [ 。，, ．， ]
-    
+  - name: wxw_hint # 逐码是否显示630
+    reset: 1
+    states: [ "关₆₃₀", "开₆₃₀" ]
 
 punctuator:
   import_preset: symbols
@@ -162,6 +164,7 @@ engine:
     - script_translator@quanpinerfen
     - script_translator@pinyin_simp
   filters:
+    - lua_filter@hint_filter # 頂功提示過濾 switches/completion = 1
     - simplifier
     - reverse_lookup_filter@pinyin_simp_lookup
     - reverse_lookup_filter@quanpinerfen_lookup
@@ -171,6 +174,7 @@ engine:
     - simplifier@EN2en
     - simplifier@ascii_punct
     - lua_filter@xkjd6_filter
+    - lua_filter@preedit_filter
     - uniquifier
 
 speller:
@@ -233,6 +237,7 @@ bmms:
 pinyin_simp_lookup:
   tags: [pinyin_simp]
   dictionary: xkjd6cx #反查其码
+
   overwrite_comment: true
 
 pinyin_simp:

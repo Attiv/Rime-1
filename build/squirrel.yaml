@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.8.5
   timestamps:
     squirrel: 1675621991
-    squirrel.custom: 1675672642
+    squirrel.custom: 1675677260
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -303,6 +303,7 @@ preset_color_schemes:
     font_point: 16
     hilited_candidate_back_color: 0xD05B21
     hilited_candidate_label_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
     hilited_corner_radius: 5
     hilited_text_color: 0xffffff
     horizontal: true
