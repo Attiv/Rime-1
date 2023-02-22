@@ -2,7 +2,7 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	479
+#@/tick	536
 那	a	11
 Vitta	avt	31
 不	b	1
@@ -14,6 +14,8 @@ Vitta	avt	31
 睹	djia	1
 菂	dkiiui	6
 丹尼斯	dnsu	20
+屎	ekavo	1
+屎	ekavou	1
 是为了	ewl	6
 沙窝里	ewl	21
 者	feu	1
@@ -39,7 +41,7 @@ Vitta	avt	31
 胡辣汤	hlt	1
 胡娜	hnua	71
 狠	hnuaav	1
-胡伟娜	hwn	5
+胡伟娜	hwn	10
 进	jb	1
 尽	jba	11
 筋斗	jbdd	1
@@ -48,6 +50,8 @@ Vitta	avt	31
 长曝光	jbg	20
 基本国策	jbgc	1
 长曝光	jbgu	5
+搅屎	jcek	35
+搅	jciu	6
 筋斗云	jdyu	25
 竞	jgovo	1
 竞秀	jgxq	15
@@ -71,7 +75,7 @@ Vitta	avt	31
 妙	mca	18
 灭	mdv	11
 灭尽龙	mjl	101
-猫猫佬	mmlu	125
+猫猫佬	mmlu	245
 妙妙妙	mmm	38
 猫佬	mzlz	150
 猫猫	mzmz	26
@@ -88,7 +92,7 @@ QQ空间	qqkj	21
 郑	qrou	6
 热	re	1
 热热	rere	22
-热热佬	rrl	75
+热热佬	rrl	165
 三	s	1
 搜	sd	1
 俗	sji	1
@@ -110,14 +114,14 @@ QQ空间	qqkj	21
 新政	xbqr	1
 新郑	xbqr	75
 硝	xcvu	1
-小石榴	xel	226
+小石榴	xel	231
 现在	xmzh	1
 秀	xqu	1
 彦	yfovu	1
 厌足	yfzj	1
 彦祖	yfzj	80
 云	yw	1
-宥宥	yy	421
+宥宥	yy	446
 用	yy	6
 勇	yya	1
 在	z	1
@@ -179,6 +183,8 @@ QQ空间	qqkj	21
 长曝光	encjbg	1
 长曝光	encjbgu	1
 长曝光	encjbo	1
+搅屎	encjcek	1
+搅屎	encjcop	1
 筋斗云	encjdou	1
 筋斗云	encjdyu	1
 竞秀	encjgop	1
@@ -287,6 +293,7 @@ QQ空间	qqkj	21
 甲硝唑	encoozj	1
 方舱	encopcp	1
 柳菂	encopdk	1
+搅屎	encopek	1
 用品质	encopfy	1
 龙湖	encophj	1
 拉挎	encopkq	1
@@ -295,6 +302,7 @@ QQ空间	qqkj	21
 丽丽	encopop	1
 彦祖	encopop	1
 拉挎	encopop	1
+搅屎	encopop	1
 新郑	encopop	1
 方舱	encopop	1
 有他	encopop	1
