@@ -13,7 +13,7 @@ __build_info:
     symbols: 1675621991
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1677035142
+    xkjd6.schema: 1677051463
 ascii_punct:
   option_name: ascii_punct
 bmms:
@@ -497,6 +497,9 @@ switches:
   - name: wxw_hint
     reset: 1
     states: ["关₆₃₀", "开₆₃₀"]
+  - name: completion
+    reset: 1
+    states: ["逐码关", "逐码开"]
 topup:
   auto_clear: true
   max_length: 6

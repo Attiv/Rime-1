@@ -55,6 +55,9 @@ switches:
   - name: wxw_hint # 逐码是否显示630
     reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
+  - name: completion
+    reset: 1
+    states: [ 逐码关, 逐码开 ]
 
 punctuator:
   import_preset: symbols
