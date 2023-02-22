@@ -42,10 +42,10 @@ patch:
       - { when: always, accept: Control+period, toggle: ascii_punct }
   ascii_composer/switch_key:
     Caps_Lock: null
-    Control_L: noop
-    Control_R: noop
-    Shift_L: null
-    Shift_R: null
+    Control_L: null
+    Control_R: null
+    Shift_L: commit_code
+    Shift_R: commit_code
   switches/@next:
     name: emoji_cn
     reset: 1
