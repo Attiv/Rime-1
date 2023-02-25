@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.8.5
   timestamps:
     squirrel: 1675621991
-    squirrel.custom: 1677132918
+    squirrel.custom: 1677333962
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -323,15 +323,16 @@ preset_color_schemes:
     candidate_back_color: 0xD05B21
     candidate_format: "%c %@  "
     candidate_text_color: 0xffffff
+    comment_text_color: 0xffffff
     corner_radius: 5
     font_face: "汉仪正圆"
-    font_point: 16
+    font_point: 20
     hilited_candidate_back_color: 0xD05B21
     hilited_candidate_label_color: 0xffffff
     hilited_comment_text_color: 0xffffff
     hilited_corner_radius: 5
     hilited_text_color: 0xffffff
-    horizontal: true
+    horizontal: false
     inline_preedit: true
     label_color: 0xffffff
     label_font_point: 14
