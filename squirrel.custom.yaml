@@ -3,6 +3,7 @@ patch:
     color_scheme: mac
     # color_scheme_dark: CatDark
     color_scheme_dark: mac_dark
+    # color_scheme_dark: dark_saber
     # color_scheme: mac
     translucency: true
     # cat windows start
@@ -317,6 +318,7 @@ patch:
       corner_radius: 5                  #设置输入条的圆角效果
       border_height: 4                  #设置输入条上下宽度
       border_width: 4                  #设置输入条左右宽度
+      comment_text_color: 0xffffff # 逐码颜色
       hilited_comment_text_color: 0xffffff
       #border_color: 0x9f62e8            #输入条边框颜色，似乎在横向模式下不起作用
       # border_color: 0xffffff            #输入条边框颜色，似乎在横向模式下不起作用
@@ -324,14 +326,14 @@ patch:
       candidate_format: "%c %@  "       #设置每个候选词之间的间隔距离，%c代表备选的数字，%@代表候选字，可以通过输入空格的形式来调整每个候选字之间的间隔距离
       candidate_text_color: 0xffffff    #候选字颜色
       font_face: "汉仪正圆"             #字体
-      font_point: 16                    #字体大小
+      font_point: 20                    #字体大小
       text_color: 0x333333    
       candidate_back_color: 0xD05B21          #普通候选字的颜色，非第一候选字
       hilited_candidate_label_color: 0xffffff   #第一候选字标签颜色，也就是数字1
       hilited_text_color: 0xffffff              #第一候选字颜色
       hilited_candidate_back_color: 0xD05B21    #第一候选字高亮颜色（背景色）
       hilited_corner_radius: 5                  #第一候选字高亮颜色的圆角，当不设置时就是一整块的颜色，设置了圆角之后就带有圆角效果了
-      horizontal: true                  #设置水平还是竖直模式
+      horizontal: false                  #设置水平还是竖直模式
       inline_preedit: true              #设置是否双行显示
       label_color: 0xffffff           #普通标签的颜色(非第一候选字)，也就是候选字数字
       label_font_point: 14              #普通标签的字体大小 
