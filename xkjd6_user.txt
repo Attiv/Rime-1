@@ -2,7 +2,7 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	551
+#@/tick	572
 那	a	11
 Vitta	avt	31
 不	b	1
@@ -52,7 +52,7 @@ Vitta	avt	31
 长曝光	jbgu	5
 搅屎	jcek	35
 搅	jciu	6
-筋斗云	jdyu	25
+筋斗云	jdyu	30
 竞	jgovo	1
 竞秀	jgxq	15
 简单	jmdf	6
@@ -67,7 +67,7 @@ Vitta	avt	31
 立	lko	1
 离	lkov	11
 丽	lkvi	2
-兰兰佬	lll	15
+兰兰佬	lll	25
 柳	lqv	6
 拉	ls	6
 龙	ly	16
@@ -77,7 +77,7 @@ Vitta	avt	31
 妙	mca	18
 灭	mdv	11
 灭尽龙	mjl	101
-猫猫佬	mmlu	280
+猫猫佬	mmlu	325
 妙妙妙	mmm	38
 猫佬	mzlz	150
 猫猫	mzmz	26
@@ -94,7 +94,7 @@ QQ空间	qqkj	21
 郑	qrou	6
 热	re	1
 热热	rere	22
-热热佬	rrl	180
+热热佬	rrl	225
 三	s	1
 搜	sd	1
 俗	sji	1
