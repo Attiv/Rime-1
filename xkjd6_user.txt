@@ -2,7 +2,7 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	543
+#@/tick	578
 那	a	11
 Vitta	avt	31
 不	b	1
@@ -52,7 +52,7 @@ Vitta	avt	31
 长曝光	jbgu	5
 搅屎	jcek	35
 搅	jciu	6
-筋斗云	jdyu	25
+筋斗云	jdyu	30
 竞	jgovo	1
 竞秀	jgxq	15
 简单	jmdf	6
@@ -63,19 +63,21 @@ Vitta	avt	31
 挎	kqi	1
 坤	kwv	1
 澜	lfao	1
+兰	lfouvv	2
 立	lko	1
 离	lkov	11
 丽	lkvi	2
+兰兰佬	lll	25
 柳	lqv	6
 拉	ls	6
 龙	ly	16
 龙湖	lyhj	70
 铑	lzio	1
-佬	lziuo	46
+佬	lziuo	51
 妙	mca	18
 灭	mdv	11
 灭尽龙	mjl	101
-猫猫佬	mmlu	270
+猫猫佬	mmlu	325
 妙妙妙	mmm	38
 猫佬	mzlz	150
 猫猫	mzmz	26
@@ -92,7 +94,7 @@ QQ空间	qqkj	21
 郑	qrou	6
 热	re	1
 热热	rere	22
-热热佬	rrl	175
+热热佬	rrl	250
 三	s	1
 搜	sd	1
 俗	sji	1
@@ -114,14 +116,14 @@ QQ空间	qqkj	21
 新政	xbqr	1
 新郑	xbqr	75
 硝	xcvu	1
-小石榴	xel	231
+小石榴	xel	236
 现在	xmzh	1
 秀	xqu	1
 彦	yfovu	1
 厌足	yfzj	1
 彦祖	yfzj	80
 云	yw	1
-宥宥	yy	446
+宥宥	yy	451
 用	yy	6
 勇	yya	1
 在	z	1
@@ -204,6 +206,14 @@ QQ空间	qqkj	21
 甲硝唑	encjxzi	1
 丽丽	enclklk	1
 丽丽	enclkop	1
+兰兰佬	enclll	1
+兰兰佬	enclllo	1
+兰兰佬	encllo	1
+兰兰佬	enclloo	1
+兰兰佬	enclol	1
+兰兰佬	enclolo	1
+兰兰佬	encloo	1
+兰兰佬	enclooo	1
 柳菂	enclqdk	1
 柳菂	enclqop	1
 拉挎	enclskq	1
@@ -247,8 +257,10 @@ QQ空间	qqkj	21
 钟柳菂	encoldf	1
 观澜郡	encoljg	1
 王立坤	encolkw	1
+兰兰佬	encolll	1
 钟柳菂	encolof	1
 观澜郡	encolog	1
+兰兰佬	encolol	1
 王立坤	encolow	1
 猫猫佬	encomlm	1
 猫猫铑	encomlm	1
@@ -267,6 +279,7 @@ QQ空间	qqkj	21
 用品质	encoofy	1
 观澜郡	encoojg	1
 王立坤	encookw	1
+兰兰佬	encooll	1
 灭尽龙	encoolm	1
 猫猫佬	encoolm	1
 猫猫铑	encoolm	1
@@ -278,6 +291,7 @@ QQ空间	qqkj	21
 观澜郡	encooog	1
 甲硝唑	encoooj	1
 筋斗云	encoooj	1
+兰兰佬	encoool	1
 妙妙妙	encooom	1
 灭尽龙	encooom	1
 猫猫佬	encooom	1
