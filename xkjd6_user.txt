@@ -2,7 +2,7 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	578
+#@/tick	572
 那	a	11
 Vitta	avt	31
 不	b	1
@@ -94,7 +94,7 @@ QQ空间	qqkj	21
 郑	qrou	6
 热	re	1
 热热	rere	22
-热热佬	rrl	250
+热热佬	rrl	225
 三	s	1
 搜	sd	1
 俗	sji	1
@@ -116,7 +116,7 @@ QQ空间	qqkj	21
 新政	xbqr	1
 新郑	xbqr	75
 硝	xcvu	1
-小石榴	xel	236
+小石榴	xel	231
 现在	xmzh	1
 秀	xqu	1
 彦	yfovu	1

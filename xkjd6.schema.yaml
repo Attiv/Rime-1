@@ -3,7 +3,8 @@
 
 schema:
   schema_id: xkjd6
-  name: 键道6
+  # name: 键道6
+  name: Attiv
   version: "1"
   dependencies:
     - xkjd6cx
