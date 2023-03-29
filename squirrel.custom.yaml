@@ -5,7 +5,7 @@ patch:
     color_scheme_dark: mac_dark
     # color_scheme_dark: dark_saber
     # color_scheme: mac
-    translucency: true
+    # translucency: true
     # cat windows start
     # font_point: 14  #候选字号
     # label_font_point: 14  #★序号字号，小于等于候选字号
@@ -179,18 +179,27 @@ patch:
       name: "浮尘／Dust"
       text_color: 0x9e9e9e
     google:
-      author: "skoj <skoj@qq.com>"
-      back_color: 0xFFFFFF
-      border_color: 0xE2E2E2
-      candidate_text_color: 0x000000
-      comment_text_color: 0x6D6D6D
-      hilited_back_color: 0xFFFFFF
-      hilited_candidate_back_color: 0xCE7539
-      hilited_candidate_text_color: 0xFFFFFF
-      hilited_comment_text_color: 0xEBC6B0
-      hilited_text_color: 0x000000
-      name: "谷歌／Google"
-      text_color: 0x666666
+      name: 谷歌
+      horizontal: false              # true横排，false竖排
+      candidate_format: "%c %@ "    # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
+      font_point: 16                           # 候选文字大小
+      label_font_point: 15                     # 候选编号大小
+      corner_radius: 6                         # 窗口圆角
+      line_spacing: 10                         # 行间距(适用于竖排)
+      font_face: "汉仪正圆" 
+      text_color: 0x666666                     # 拼音行文字颜色
+      candidate_text_color: 0x000000           # 预选项文字颜色
+      back_color: 0xFFFFFF                     # 候选条背景色，24位色值，16进制，BGR顺序
+      border_color: 0xE2E2E2                   # 边框
+      hilited_text_color: 0x000000             # 高亮拼音 (需要开启内嵌编码)
+      hilited_back_color: 0xFFFFFF             # 第一候选项背景背景色
+      hilited_candidate_text_color: 0xffffff   # 第一候选项文字颜色
+      hilited_candidate_back_color: 0xCE7539   # 候选文字背景色 
+      comment_text_color: 0x6D6D6D             # 拼音等提示文字颜色
+      hilited_comment_text_color: 0xEBC6B0     # 注解文字高亮
+      hilited_candidate_label_color: 0xfafafa  # 第一候选项编号颜色
+      blur: true
+      translucency: true
     ink:
       author: "佛振 <chen.sst@gmail.com>"
       back_color: 0xeeffffff
@@ -305,6 +314,34 @@ patch:
       hilited_candidate_back_color: 0xD05B21    #第一候选字高亮颜色（背景色）
       hilited_corner_radius: 5                  #第一候选字高亮颜色的圆角，当不设置时就是一整块的颜色，设置了圆角之后就带有圆角效果了
       horizontal: true                  #设置水平还是竖直模式
+      inline_preedit: true              #设置是否双行显示
+      label_color: 0x888888             #普通标签的颜色(非第一候选字)，也就是候选字数字
+      label_font_point: 14              #普通标签的字体大小 
+      # alpha: 0.75
+      blur: true
+      # translucency: true
+    mac_shu:
+      author: "lamb"
+      name: "lamb"
+      hilited_comment_text_color: 0xffffff
+      back_color: 0x00000000             #设置输入条的背景色，色值是按照BGR的形式16进制填写
+      corner_radius: 5                  #设置输入条的圆角效果
+      border_height: 4                  #设置输入条上下宽度
+      border_width: 4                  #设置输入条左右宽度
+      #border_color: 0x9f62e8            #输入条边框颜色，似乎在横向模式下不起作用
+      # border_color: 0xffffff            #输入条边框颜色，似乎在横向模式下不起作用
+      border_color_width: 0             #输入条边框宽度
+      candidate_format: "%c %@  "       #设置每个候选词之间的间隔距离，%c代表备选的数字，%@代表候选字，可以通过输入空格的形式来调整每个候选字之间的间隔距离
+      candidate_text_color: 0x333333    #候选字颜色
+      font_face: "汉仪正圆"             #字体
+      font_point: 20                    #字体大小
+      text_color: 0x333333    
+      candidate_back_color: 0xD05B21          #普通候选字的颜色，非第一候选字
+      hilited_candidate_label_color: 0xffffff   #第一候选字标签颜色，也就是数字1
+      hilited_text_color: 0xffffff              #第一候选字颜色
+      hilited_candidate_back_color: 0xD05B21    #第一候选字高亮颜色（背景色）
+      hilited_corner_radius: 5                  #第一候选字高亮颜色的圆角，当不设置时就是一整块的颜色，设置了圆角之后就带有圆角效果了
+      horizontal: false                  #设置水平还是竖直模式
       inline_preedit: true              #设置是否双行显示
       label_color: 0x888888             #普通标签的颜色(非第一候选字)，也就是候选字数字
       label_font_point: 14              #普通标签的字体大小 
@@ -437,6 +474,29 @@ patch:
       hilited_comment_text_color: 0xc5c5c5          #高亮候选编码提示文字颜色
       label_color: 0x85ffffff                         #非高亮候选数字颜色
       hilited_label_color: 0xe5ffffff                 #高亮候选数字颜色
+    dracula:
+      name: "Dracula"
+      translucency: true
+      corner_radius: 5
+      hilited_corner_radius: 5
+      border_height: 4
+      border_width: 4
+      border_color_width: 0
+      base_offset: 0
+      color_space: display_p3
+      back_color: 0x352A28
+      border_color: 0x352A28
+      candidate_text_color: 0xF3F8F8
+      comment_text_color: 0xA07265
+      label_color: 0xFAE7A1
+      hilited_candidate_back_color: 0x584745
+      hilited_candidate_text_color: 0xF3F8F8
+      hilited_comment_text_color: 0xA07265
+      hilited_candidate_label_color: 0x5C62EC
+      preedit_back_color: 0x584745
+      text_color: 0xF3F8F8
+      hilited_back_color: 0x584745
+      hilited_text_color: 0xF3F8F8
 
 
   "app_options/com.runningwithcrayons.Alfred-3/ascii_mode": false

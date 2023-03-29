@@ -73,7 +73,7 @@ preset_keyboards:
       - { width: 5 }
       - { click: a, label: a, swipe_up: "！", swipe_down: commit！ }
       - { click: s, label: s, swipe_up: "…", swipe_down: commit… }
-      - { click: d, label: d, swipe_up: "'", swipe_down: "," }
+      - { click: d, label: d, swipe_up: "%", swipe_down: "％" }
       - { click: f, label: f, swipe_up: "；", swipe_down: commit； }
       - { click: g, label: g, swipe_up: bracket2, swipe_down: commit（ }
       - { click: h, label: h, swipe_up: "）", swipe_down: commit） }

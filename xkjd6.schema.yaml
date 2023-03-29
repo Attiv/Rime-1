@@ -114,7 +114,8 @@ punctuator:
     '!' : { commit: ！ }
     '@' : '@'
     '#' : '#'
-    '%' : [ '%', ％, '°', '℃' ]
+    '%' : '%'
+    # '%' : [ '%', ％, '°', '℃' ]
     '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
     '^' : { commit: …… }
     '&' : '&'
@@ -362,6 +363,7 @@ key_binder:
     # - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
     - { when: always, accept: F6, select: .next }
     - { when: always, accept: F7, toggle: jffh }
+    # - { when: always, accept: "#", toggle: emoji_cn }
     # - { when: has_menu, accept: "'", send: 2 }
     # - { when: has_menu, accept: "&", toggle: emoji_cn}
     - { when: has_menu, accept: "^", toggle: bmms}
