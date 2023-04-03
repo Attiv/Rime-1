@@ -79,7 +79,7 @@ preset_keyboards:
       - { click: h, label: h, swipe_up: "）", swipe_down: commit） }
       - { click: j, label: j, swipe_up: "＃", swipe_down: commitJin }
       - { click: k, label: k, swipe_up: quotationMarkFull2, swipe_down: commit” }
-      - { click: l, label: l, swipe_up: "”", swipe_down: commit‘ }
+      - { click: l, label: l, swipe_up: "〞", swipe_down: commit‘ }
       - { width: 5 }
 
       # 第三行
@@ -270,8 +270,8 @@ preset_keys:
   bracket: { label: "(", text: "(){Left}{DefaultKeyboard}" } #先上屏()光标往左移动一格再跳转到default键盘
   bracket2: { label: "（", text: "（）{Left}" } #先上屏()光标往左移动一格
   bracket1: { label: ")", text: "){DefaultKeyboard}" } #先上屏)再跳转到default键盘
-  quotationMarkFull: { label: "〝", text: "〝〞{Left}{DefaultKeyboard}" }
-  quotationMarkFull1: { label: "〞", text: "〞{Left}{DefaultKeyboard}" }
+  quotationMarkFull: {label: "“", text: "“”{Left}{DefaultKeyboard}"} 
+  quotationMarkFull1: {label: "”", text: "“”{Left}{DefaultKeyboard}"}
   quotationMarkFull2: { label: "“", text: "“”{Left}" }
   # quotationMarkHalf１: { label: '"', text: '"{DefaultKeyboard}' }
   quotationMarkHalf2: { label: '"', text: "“”{Left}" }
