@@ -47,7 +47,7 @@ switches:
   - name: jffh
     reset: 0
     states: [ 简体, 繁體 ]
-  - name: sbb_hint
+  - name: wxw_hint
     reset: 1 # 改成0默认关闭
     states: [ "关₆₃₀", "开₆₃₀" ]
   - name: EN2en
