@@ -6,9 +6,9 @@ sort: original
 # 特殊
 *#06#	xjlji
 # 标点
-；	;
-：	;;
-！	;a
+;	;
+:	;;
+!	;a
 %	;b
 ←	;c
 ↑	;ce
@@ -20,8 +20,8 @@ sort: original
 >	;h
 《	;i
 “	;t
-（	;k
-）	;l
+(	;k
+)	;l
 {	;m
 }	;n
 》	;o
@@ -31,17 +31,17 @@ sort: original
 ……	;s
 ctrl+z	;u
 =	;v
-？	;w
+?	;w
 →	;x
 ”	;y
-____	;z
+```	;z
 
-！	oa
-？	oW
+!	oa
+?	oW
 ……	os
 、	od
-（	ok
-）	ol
+(	ok
+)	ol
 ``	of
 <	og
 >	oh
@@ -58,7 +58,6 @@ ____	;z
 %	ob
 {	on 
 }	om
-
 
 # windows QQ表情
 /am	oqam
@@ -281,4 +280,5 @@ ____	;z
 [苦涩]	owks
 [裂开]	owlk
 [快哭了]	owkk
+[破涕为笑]	owpt
 
