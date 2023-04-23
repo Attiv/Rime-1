@@ -357,8 +357,8 @@ key_binder:
     - { when: always, accept: "Control+period", toggle: ascii_punct }
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
-    - {accept: comma, send: Page_Up, when: has_menu}
-    - {accept: period, send: Page_Down, when: has_menu}
+    # - {accept: comma, send: Page_Up, when: has_menu}
+    # - {accept: period, send: Page_Down, when: has_menu}
     # - {accept: bracketleft, send: Page_Up, when: has_menu} # [上翻页
     # - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
     - { when: always, accept: F6, select: .next }
