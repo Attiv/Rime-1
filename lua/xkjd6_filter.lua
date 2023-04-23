@@ -28,8 +28,9 @@ local function danzi(cand)
 end
 
 local function commit_hint(cand)
-    -- cand:get_genuine().comment = '🚫' .. cand.comment
-    cand:get_genuine().comment = cand.comment
+    -- 不能顶的话会加个🚫
+    cand:get_genuine().comment = '🚫' .. cand.comment
+    -- cand:get_genuine().comment = cand.comment
 end
 
 local function filter(input, env)
