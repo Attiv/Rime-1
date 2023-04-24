@@ -18,7 +18,7 @@ height:
   1: &jpgd1 43.6 #符号键盘
   2: &jpgd2 41.5 #主键盘
   3: &jpgd3 41.5 #数字键盘
-  4: &jpgd4 12 #主键盘圆角
+  4: &jpgd4 16 #主键盘圆角
   5: &jpgd5 44 #候选区高度
   6: &jpgd6 0.5 #符号键盘行间距
   7: &jpgd7 0.5 #符号键盘水平间距
@@ -37,7 +37,7 @@ style:
   comment_text_size: 14 #逐码字体大小 默认值为：14
   comment_height: 16 #逐码高度 默认值为：16
   show_preview: true #是否显示气泡 默认显示
-  round_corner: 04 #值为0的话默认 iphone为4，ipad为8
+  round_corner: 6 #值为0的话默认 iphone为4，ipad为8
   inline_preedit: true
   preedit_type: preview
   sound: "10_key_press_click.caf"
@@ -73,13 +73,13 @@ preset_keyboards:
       - { width: 5 }
       - { click: a, label: a, swipe_up: "！", swipe_down: commit！ }
       - { click: s, label: s, swipe_up: "…", swipe_down: commit… }
-      - { click: d, label: d, swipe_up: "'", swipe_down: "," }
+      - { click: d, label: d, swipe_up: "%", swipe_down: "％" }
       - { click: f, label: f, swipe_up: "；", swipe_down: commit； }
       - { click: g, label: g, swipe_up: bracket2, swipe_down: commit（ }
       - { click: h, label: h, swipe_up: "）", swipe_down: commit） }
       - { click: j, label: j, swipe_up: "＃", swipe_down: commitJin }
       - { click: k, label: k, swipe_up: quotationMarkFull2, swipe_down: commit” }
-      - { click: l, label: l, swipe_up: "”", swipe_down: commit‘ }
+      - { click: l, label: l, swipe_up: "〞", swipe_down: commit‘ }
       - { width: 5 }
 
       # 第三行
@@ -270,8 +270,8 @@ preset_keys:
   bracket: { label: "(", text: "(){Left}{DefaultKeyboard}" } #先上屏()光标往左移动一格再跳转到default键盘
   bracket2: { label: "（", text: "（）{Left}" } #先上屏()光标往左移动一格
   bracket1: { label: ")", text: "){DefaultKeyboard}" } #先上屏)再跳转到default键盘
-  quotationMarkFull: { label: "〝", text: "〝〞{Left}{DefaultKeyboard}" }
-  quotationMarkFull1: { label: "〞", text: "〞{Left}{DefaultKeyboard}" }
+  quotationMarkFull: {label: "“", text: "“”{Left}{DefaultKeyboard}"} 
+  quotationMarkFull1: {label: "”", text: "“”{Left}{DefaultKeyboard}"}
   quotationMarkFull2: { label: "“", text: "“”{Left}" }
   # quotationMarkHalf１: { label: '"', text: '"{DefaultKeyboard}' }
   quotationMarkHalf2: { label: '"', text: "“”{Left}" }

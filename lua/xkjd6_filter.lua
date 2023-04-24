@@ -13,6 +13,7 @@ local function hint(cand, context, reverse)
     local input = context.input 
     if short and utf8.len(input) > utf8.len(short) and not startswith(short, input) then
         cand:get_genuine().comment = cand.comment .. "〔" .. short .. "〕"
+        -- cand:get_genuine().comment = cand.comment .. " = " .. short
         return true
     end
 
@@ -27,13 +28,14 @@ local function danzi(cand)
 end
 
 local function commit_hint(cand)
-    -- cand:get_genuine().comment = '🚫' .. cand.comment
-    cand:get_genuine().comment = cand.comment
+    -- 不能顶的话会加个🚫
+    cand:get_genuine().comment = '🚫' .. cand.comment
+    -- cand:get_genuine().comment = cand.comment
 end
 
 local function filter(input, env)
     local is_danzi = env.engine.context:get_option('danzi_mode')
-    local is_on = env.engine.context:get_option('sbb_hint')
+    local is_on = env.engine.context:get_option('wxw_hint')
     local first = true
     local input_text = env.engine.context.input
     local no_commit = (input_text:len() < 4 and input_text:match("^[bcdefghjklmnpqrstwxyz]+$")) or (input_text:match("^[avuio]+$"))

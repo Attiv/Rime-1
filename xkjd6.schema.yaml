@@ -114,7 +114,8 @@ punctuator:
     '!' : { commit: ！ }
     '@' : '@'
     '#' : '#'
-    '%' : [ '%', ％, '°', '℃' ]
+    '%' : '%'
+    # '%' : [ '%', ％, '°', '℃' ]
     '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
     '^' : { commit: …… }
     '&' : '&'
@@ -171,7 +172,7 @@ engine:
     - script_translator@quanpinerfen
     - script_translator@pinyin_simp
   filters:
-    - lua_filter@hint_filter # 頂功提示過濾 switches/completion = 1
+    # - lua_filter@hint_filter # 頂功提示過濾 switches/completion = 1
     - simplifier@emoji_cn
     - simplifier
     - simplifier@jffh
@@ -231,6 +232,8 @@ EN2en:
 emoji_cn:
   opencc_config: emoji.json
   option_name: emoji_cn
+  comment_format: # 不显示emoji 后面的文字
+    - xform/.*//
   tips: all
 
 jffh:
@@ -356,12 +359,13 @@ key_binder:
     - { when: always, accept: "Control+period", toggle: ascii_punct }
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
-    - {accept: comma, send: Page_Up, when: has_menu}
-    - {accept: period, send: Page_Down, when: has_menu}
+    # - {accept: comma, send: Page_Up, when: has_menu}
+    # - {accept: period, send: Page_Down, when: has_menu}
     # - {accept: bracketleft, send: Page_Up, when: has_menu} # [上翻页
     # - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
     - { when: always, accept: F6, select: .next }
     - { when: always, accept: F7, toggle: jffh }
+    # - { when: always, accept: "#", toggle: emoji_cn }
     # - { when: has_menu, accept: "'", send: 2 }
     # - { when: has_menu, accept: "&", toggle: emoji_cn}
     - { when: has_menu, accept: "^", toggle: bmms}
