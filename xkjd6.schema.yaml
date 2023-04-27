@@ -10,6 +10,7 @@ schema:
     - xkjd6cx
     - pinyin_simp
     - liangfen
+    - xmjd6.en
 
 
 # Layout config
@@ -148,6 +149,7 @@ engine:
     - ascii_segmentor
     - matcher
     - affix_segmentor@pinyin_simp
+    - affix_segmentor@xmjd6en
     - affix_segmentor@quanpinerfen
     - affix_segmentor@xkjdWXYZ
     - abc_segmentor
@@ -171,6 +173,7 @@ engine:
     - history_translator@repeat_history2
     - script_translator@quanpinerfen
     - script_translator@pinyin_simp
+    - table_translator@xmjd6en
   filters:
     # - lua_filter@hint_filter # 頂功提示過濾 switches/completion = 1
     - simplifier@emoji_cn
@@ -218,6 +221,17 @@ repeat_history:
   input: i #重复上次上屏内容
   size: 1
   initial_quality: 10000
+
+xmjd6en:
+  tag: xmjd6en
+  dictionary: xmjd6.en
+  enable_sentence: true
+  enable_completion: true
+  enable_user_dict: false
+  comment_format:
+    - xform/.*//
+  prefix: "i"
+  tips: "〔单词〕"
 
 repeat_history2:
   input: ;f #重复上次上屏内容
@@ -423,6 +437,7 @@ recognizer:
     pinyin_simp: "^u[a-z']*'?$"
     quanpinerfen: "^v[a-z']*'?$"
     jsq: "^=[^;']+$"
+    xmjd6en: "^i[a-z]*?$"
 #        xkjdWXYZ: "^'['/a-z][a-z0-9,./:?!']*'?$"
 
 topup:
