@@ -32,4 +32,5 @@ Session.vim
 # emoji_suggestion.yaml
 .history
 xkjd6.zidingyi.dict.yaml
+.DS_Store
 jd6_win.zip

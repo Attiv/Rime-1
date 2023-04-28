@@ -1,8 +1,8 @@
 __build_info:
   rime_version: 1.8.5
   timestamps:
-    squirrel: 1675621991
-    squirrel.custom: 1677575513
+    squirrel: 1682327151
+    squirrel.custom: 1682327173
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -52,8 +52,9 @@ com.apple.Finder:
   ascii_mode: false
 com.sublimetext.3:
   ascii_mode: false
-config_version: 0.37
-keyboard_layout: default
+config_version: 0.38
+keyboard_layout: last
+"null": true
 preset_color_schemes:
   CatDark:
     author: ProudCat
@@ -219,6 +220,29 @@ preset_color_schemes:
     hilited_text_color: 0xffcf9a
     name: "暗堂／Dark Temple"
     text_color: 0x92f6da
+  dracula:
+    back_color: 0x352A28
+    base_offset: 0
+    border_color: 0x352A28
+    border_color_width: 0
+    border_height: 4
+    border_width: 4
+    candidate_text_color: 0xF3F8F8
+    color_space: display_p3
+    comment_text_color: 0xA07265
+    corner_radius: 5
+    hilited_back_color: 0x584745
+    hilited_candidate_back_color: 0x584745
+    hilited_candidate_label_color: 0x5C62EC
+    hilited_candidate_text_color: 0xF3F8F8
+    hilited_comment_text_color: 0xA07265
+    hilited_corner_radius: 5
+    hilited_text_color: 0xF3F8F8
+    label_color: 0xFAE7A1
+    name: Dracula
+    preedit_back_color: 0x584745
+    text_color: 0xF3F8F8
+    translucency: true
   dust:
     author: "Superoutman <asticosmo@gmail.com>"
     back_color: 0xeeffffff
@@ -244,18 +268,27 @@ preset_color_schemes:
     name: "浮尘／Dust"
     text_color: 0x9e9e9e
   google:
-    author: "skoj <skoj@qq.com>"
     back_color: 0xFFFFFF
+    blur: true
     border_color: 0xE2E2E2
+    candidate_format: "%c %@ "
     candidate_text_color: 0x000000
     comment_text_color: 0x6D6D6D
+    corner_radius: 6
+    font_face: "汉仪正圆"
+    font_point: 16
     hilited_back_color: 0xFFFFFF
     hilited_candidate_back_color: 0xCE7539
-    hilited_candidate_text_color: 0xFFFFFF
+    hilited_candidate_label_color: 0xfafafa
+    hilited_candidate_text_color: 0xffffff
     hilited_comment_text_color: 0xEBC6B0
     hilited_text_color: 0x000000
-    name: "谷歌／Google"
+    horizontal: false
+    label_font_point: 15
+    line_spacing: 10
+    name: "谷歌"
     text_color: 0x666666
+    translucency: true
   ink:
     author: "佛振 <chen.sst@gmail.com>"
     back_color: 0xeeffffff
@@ -289,7 +322,7 @@ preset_color_schemes:
     name: "明月／Luna"
     text_color: 0xa5a5a5
   mac:
-    author: lamb
+    author: vitta
     back_color: 0x00000000
     blur: true
     border_color_width: 0
@@ -310,11 +343,10 @@ preset_color_schemes:
     inline_preedit: true
     label_color: 0x888888
     label_font_point: 14
-    name: lamb
+    name: vitta_light
     text_color: 0x333333
-    translucency: true
   mac_dark:
-    author: lamb
+    author: viita
     back_color: 0x00000000
     blur: true
     border_color_width: 0
@@ -335,6 +367,31 @@ preset_color_schemes:
     horizontal: false
     inline_preedit: true
     label_color: 0xffffff
+    label_font_point: 14
+    name: vitta_dark
+    text_color: 0x333333
+    translucency: true
+  mac_shu:
+    author: lamb
+    back_color: 0x00000000
+    blur: true
+    border_color_width: 0
+    border_height: 4
+    border_width: 4
+    candidate_back_color: 0xD05B21
+    candidate_format: "%c %@  "
+    candidate_text_color: 0x333333
+    corner_radius: 5
+    font_face: "汉仪正圆"
+    font_point: 20
+    hilited_candidate_back_color: 0xD05B21
+    hilited_candidate_label_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_corner_radius: 5
+    hilited_text_color: 0xffffff
+    horizontal: false
+    inline_preedit: true
+    label_color: 0x888888
     label_font_point: 14
     name: lamb
     text_color: 0x333333
@@ -363,6 +420,13 @@ preset_color_schemes:
     label_font_point: 18
     name: "沙漠夜／Mojave Dark"
     text_color: 0xdedddd
+  native:
+    hilited_candidate_back_color: 0xFFFFFF
+    hilited_candidate_text_color: 0x000000
+    name: "系統配色"
+  native_dark:
+    hilited_candidate_back_color: 0x434246
+    name: "系統暗色"
   psionics:
     author: "雨過之後、佛振"
     back_color: 0x444444
@@ -442,8 +506,25 @@ preset_color_schemes:
     hilited_text_color: 0xfecb96
     name: "星際我爭霸／StarCraft"
     text_color: 0xccaa88
+  wechat:
+    author: zsakvo
+    back_color: 0xE2E3E6
+    border_height: 3
+    border_width: 8
+    candidate_format: "%c %@ "
+    comment_text_color: 0x999999
+    corner_radius: 5
+    font_face: PingFangSC
+    font_point: 16
+    hilited_candidate_back_color: 0x75B100
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_corner_radius: 5
+    horizontal: true
+    inline_preedit: true
+    label_font_point: 12
+    name: "微信键盘 / WeChat-keyboard"
+    text_color: 0x424242
 show_notifications_when: appropriate
 style:
   color_scheme: mac
   color_scheme_dark: mac_dark
-  translucency: true

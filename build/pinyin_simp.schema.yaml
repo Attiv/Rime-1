@@ -2,11 +2,11 @@ __build_info:
   rime_version: 1.8.5
   timestamps:
     default: 1675621991
-    default.custom: 1657673418
-    key_bindings: 1675621991
+    default.custom: 1682327158
+    key_bindings: 1677768981
     key_bindings.custom: 0
     pinyin_simp.custom: 0
-    pinyin_simp.schema: 1630842168
+    pinyin_simp.schema: 1682327151
     punctuation: 1675621991
     punctuation.custom: 0
 engine:
@@ -30,6 +30,13 @@ engine:
     - script_translator
 key_binder:
   bindings:
+    - {accept: bracketleft, send: Page_Up, when: has_menu}
+    - {accept: bracketright, send: Page_Down, when: has_menu}
+    - {accept: ";", send: 2, when: composing}
+    - {accept: comma, send: 3, when: composing}
+    - {accept: Tab, send: Escape, when: composing}
+    - {accept: "Release+semicolon", send: semicolon, when: composing}
+    - {accept: "Release+comma", send: comma, when: composing}
     - {accept: "Control+p", send: Up, when: composing}
     - {accept: "Control+n", send: Down, when: composing}
     - {accept: "Control+b", send: Left, when: composing}
@@ -41,16 +48,10 @@ key_binder:
     - {accept: "Control+h", send: BackSpace, when: composing}
     - {accept: "Control+g", send: Escape, when: composing}
     - {accept: "Control+bracketleft", send: Escape, when: composing}
-    - {accept: "Control+y", send: Page_Up, when: composing}
     - {accept: "Alt+v", send: Page_Up, when: composing}
     - {accept: "Control+v", send: Page_Down, when: composing}
-    - {accept: ISO_Left_Tab, send: "Shift+Left", when: composing}
-    - {accept: "Shift+Tab", send: "Shift+Left", when: composing}
-    - {accept: Tab, send: "Shift+Right", when: composing}
-    - {accept: minus, send: Page_Up, when: has_menu}
-    - {accept: equal, send: Page_Down, when: has_menu}
-    - {accept: comma, send: Page_Up, when: paging}
-    - {accept: period, send: Page_Down, when: has_menu}
+    - {accept: ISO_Left_Tab, send: Page_Up, when: composing}
+    - {accept: "Shift+Tab", send: Page_Up, when: composing}
     - {accept: "Control+Shift+1", select: .next, when: always}
     - {accept: "Control+Shift+2", toggle: ascii_mode, when: always}
     - {accept: "Control+Shift+3", toggle: full_shape, when: always}
@@ -61,9 +62,11 @@ key_binder:
     - {accept: "Control+Shift+numbersign", toggle: full_shape, when: always}
     - {accept: "Control+Shift+dollar", toggle: simplification, when: always}
     - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
+    - {accept: "Shift+space", toggle: full_shape, when: always}
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
   import_preset: default
 menu:
-  page_size: 5
+  page_size: 6
 punctuator:
   full_shape:
     " ": {commit: "　"}

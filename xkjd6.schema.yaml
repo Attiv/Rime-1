@@ -10,6 +10,7 @@ schema:
     - xkjd6cx
     - pinyin_simp
     - liangfen
+    - xmjd6.en
 
 
 # Layout config
@@ -59,6 +60,9 @@ switches:
   - name: completion
     reset: 1
     states: [ 逐码关, 逐码开 ]
+  - name: en_tran
+    states: [ 关闭英文翻译,开启英文翻译  ]
+    reset: 1
 
 punctuator:
   import_preset: symbols
@@ -148,6 +152,7 @@ engine:
     - ascii_segmentor
     - matcher
     - affix_segmentor@pinyin_simp
+    - affix_segmentor@xmjd6en
     - affix_segmentor@quanpinerfen
     - affix_segmentor@xkjdWXYZ
     - abc_segmentor
@@ -171,6 +176,7 @@ engine:
     - history_translator@repeat_history2
     - script_translator@quanpinerfen
     - script_translator@pinyin_simp
+    - table_translator@xmjd6en
   filters:
     # - lua_filter@hint_filter # 頂功提示過濾 switches/completion = 1
     - simplifier@emoji_cn
@@ -181,6 +187,7 @@ engine:
     - simplifier@ascii_punct
     - lua_filter@xkjd6_filter
     - lua_filter@preedit_filter
+    - lua_filter@xmjd6en_filter
     - uniquifier
     - reverse_lookup_filter@pinyin_simp_lookup
     - reverse_lookup_filter@quanpinerfen_lookup
@@ -218,6 +225,17 @@ repeat_history:
   input: i #重复上次上屏内容
   size: 1
   initial_quality: 10000
+
+xmjd6en:
+  tag: xmjd6en
+  dictionary: xmjd6.en
+  enable_sentence: true
+  enable_completion: true
+  enable_user_dict: false
+  comment_format:
+    - xform/.*//
+  prefix: "i"
+  tips: "〔单词〕"
 
 repeat_history2:
   input: ;f #重复上次上屏内容
@@ -364,6 +382,7 @@ key_binder:
     # - {accept: bracketleft, send: Page_Up, when: has_menu} # [上翻页
     # - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
     - { when: always, accept: F6, select: .next }
+    - { when: composing, accept: F8, toggle: en_tran }
     - { when: always, accept: F7, toggle: jffh }
     # - { when: always, accept: "#", toggle: emoji_cn }
     # - { when: has_menu, accept: "'", send: 2 }
@@ -423,6 +442,7 @@ recognizer:
     pinyin_simp: "^u[a-z']*'?$"
     quanpinerfen: "^v[a-z']*'?$"
     jsq: "^=[^;']+$"
+    xmjd6en: "^i[a-z]*?$"
 #        xkjdWXYZ: "^'['/a-z][a-z0-9,./:?!']*'?$"
 
 topup:

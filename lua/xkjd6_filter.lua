@@ -29,7 +29,7 @@ end
 
 local function commit_hint(cand)
     -- 不能顶的话会加个🚫
-    cand:get_genuine().comment = '🚫' .. cand.comment
+    cand:get_genuine().comment = '✖' .. cand.comment
     -- cand:get_genuine().comment = cand.comment
 end
 
