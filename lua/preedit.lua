@@ -28,6 +28,7 @@ local function reverse_lookup_filter(input, env)
     for cand in input:iter() do
         if is_preview_on then
             cand:get_genuine().preedit = cand.text
+            -- cand:get_genuine().preedit =cand.preedit .. cand.text -- 候选栏显示按键label
             yield(cand)
         else
             yield(cand)

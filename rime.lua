@@ -111,3 +111,4 @@ oo_processor = M.ooprocessor
 oo_filter =M.oofilter
 --]]
 preedit_filter = require("preedit")
+xmjd6en_filter = require("mxjd6en_filter")
