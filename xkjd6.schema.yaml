@@ -307,6 +307,13 @@ custom_phrase:
 
 reverse_lookup:
   dictionary: xkjd6cx
+  overwrite_comment: true # 是否覆蓋其他提示
+  enable_charset_filter: false # 是否開啓字符集過濾
+  enable_completion: true # 逐鍵顯示
+  enable_encoder: false # 是否開啓自動造詞
+  enable_sentence: false # 是否開啓自動造句
+  enable_user_dict: false # 是否開啓用戶詞典
+  encode_commit_history: false # 是否對已上屛詞自動成詞
   comment_format:
     - xform/^/〔/
     - xform/$/〕/
