@@ -191,6 +191,7 @@ engine:
     - uniquifier
     - reverse_lookup_filter@pinyin_simp_lookup
     - reverse_lookup_filter@quanpinerfen_lookup
+    - lua_filter@split_filter
 
 speller:
   auto_select: false
