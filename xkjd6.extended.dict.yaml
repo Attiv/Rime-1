@@ -63,6 +63,7 @@ import_tables:
 ## 自定义词库：自己做的词库，自己维护
   - xkjd6.gbk
   - xkjd6.zidingyi
+  - xkjd6.extra
   # - jdl_Z
 
 # =======================================
