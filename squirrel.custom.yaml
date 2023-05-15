@@ -525,6 +525,14 @@ patch:
     native_dark:
       name: 系統暗色
       hilited_candidate_back_color: 0x434246  # 选中候选底色
+    wechatsj:
+      name: 微信绿手机
+      author: Jermaine
+      alpha: 1.0                                # 候选窗口透明度：符点型数据，小数点形式，不然出错无法正常显示皮肤
+      hilited_candidate_text_color: 0xffffff   # 颜色 - 首选候选词 - 文字
+      hilited_candidate_back_color: 0x91c823  # 颜色 - 首选候选词 - 背景  8位的前两位是颜色透明度，00就是透明，FF就是不透明
+      hilited_candidate_label_color: 0xffffff # 颜色 - 首选候选词 - 序号
+      hilited_comment_text_color: 0xffffff     # 颜色 - 首选候选词 - 提示编码
 
 
   "app_options/com.runningwithcrayons.Alfred-3/ascii_mode": false
