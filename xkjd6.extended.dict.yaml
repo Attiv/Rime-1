@@ -67,6 +67,8 @@ import_tables:
   - xkjd6.jisuanji
   - xkjd6.yixue
   - xkjd6.yinyang
+  - xkjd6.tangshi
+  - xkjd6.qiche
   # - jdl_Z
 
 # =======================================
