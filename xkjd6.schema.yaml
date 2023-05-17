@@ -188,10 +188,10 @@ engine:
     - lua_filter@xkjd6_filter
     - lua_filter@preedit_filter
     - lua_filter@xmjd6en_filter
-    - uniquifier
     - reverse_lookup_filter@pinyin_simp_lookup
     - reverse_lookup_filter@quanpinerfen_lookup
     - lua_filter@split_filter
+    - uniquifier
 
 speller:
   auto_select: false
