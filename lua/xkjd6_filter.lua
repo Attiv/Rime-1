@@ -29,7 +29,9 @@ end
 
 local function commit_hint(cand)
     -- 不能顶的话会加个🚫
-    cand:get_genuine().comment = '✖' .. cand.comment
+    if utf8.len(cand.text) < 2 then
+        cand:get_genuine().comment = '✖' .. cand.comment
+    end
     -- cand:get_genuine().comment = cand.comment
 end
 
