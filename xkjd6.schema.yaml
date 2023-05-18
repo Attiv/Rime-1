@@ -252,7 +252,7 @@ emoji_cn:
   opencc_config: emoji.json
   option_name: emoji_cn
   comment_format: # 不显示emoji 后面的文字
-    - xform/.*//
+    - xform/.*/ /
   tips: all
 
 jffh:
