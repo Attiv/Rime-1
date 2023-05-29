@@ -31,9 +31,20 @@ local function commit_hint(cand)
     -- 不能顶的话会加个🚫
     if utf8.len(cand.text) < 2 then
         cand:get_genuine().comment = '✖' .. cand.comment
+    else
+        cand:get_genuine().comment = cand.comment
     end
     -- cand:get_genuine().comment = cand.comment
 end
+
+local function is_first_candidate(candidate)
+  if candidate.index == 0 then
+    return true
+  else
+    return false
+  end
+end
+
 
 local function filter(input, env)
     local is_danzi = env.engine.context:get_option('danzi_mode')
