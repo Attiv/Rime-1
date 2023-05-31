@@ -221,6 +221,7 @@ translator:
   comment_format:
 #    - xform|~||
     - xform/[0-9]//  #无数字
+    # - xform|.*||        #无字母提示 - xform|.*|| 隐藏~符号 - xform|~||   把前面的内容。替换为后面的内容。支持正则检索
 
 repeat_history:
   input: i #重复上次上屏内容
