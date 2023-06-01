@@ -113,3 +113,7 @@ oo_filter =M.oofilter
 preedit_filter = require("preedit")
 xmjd6en_filter = require("mxjd6en_filter")
 split_filter = require("split")
+
+-- 以词定字
+-- 可在 default.yaml key_binder 下配置快捷键，默认为左右中括号 [ ]
+select_character = require("select_character")

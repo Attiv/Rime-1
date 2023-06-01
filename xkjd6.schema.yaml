@@ -137,6 +137,7 @@ punctuator:
 
 engine:
   processors:
+    - lua_processor@select_character  # 以词定字
     - lua_processor@xuanchongjsq
     - ascii_composer
     - recognizer
@@ -378,6 +379,8 @@ xkjd6_user:
 
 key_binder:
 #  import_preset: default
+  select_first_character: "bracketleft"  # 左中括号 [
+  select_last_character: "bracketright"  # 右中括号 ]
   bindings:
     - {accept: "Shift+space", send: space, when: composing}   #小狼毫输入法中进行引导造词时的上屏组合键（Shift+space），同文输入法则需要点击候选词上屏
     # - {accept: "space", send: 1, when: composing}   #引导造词中空格等于首选，空格就丧失了上屏的功能（在引导造词中）
