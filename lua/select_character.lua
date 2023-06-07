@@ -56,7 +56,8 @@ local function select_character(key, env)
     local first_key = config:get_string('key_binder/select_first_character')
     local last_key = config:get_string('key_binder/select_last_character')
 
-    if context:has_menu() then
+
+    if context:has_menu() and context:get_selected_candidate().text ~= '「' then
         if (key:repr() == first_key) then
             if (context:get_selected_candidate().text) then
                 engine:commit_text(utf8_sub(context:get_selected_candidate().text, 1, 1))
