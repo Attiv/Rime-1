@@ -319,7 +319,7 @@ patch:
       inline_preedit: true              #设置是否双行显示
       label_color: 0x888888             #普通标签的颜色(非第一候选字)，也就是候选字数字
       label_font_point: 14              #普通标签的字体大小 
-      comment_font_point: 14            # 右边的提示字体
+      # comment_font_point: 14            # 右边的提示字体
       # alpha: 0.75
       blur: true
       # translucency: true
@@ -523,6 +523,7 @@ patch:
       name: 系統配色
       hilited_candidate_back_color: 0xFFFFFF  # 选中候选底色
       hilited_candidate_text_color: 0x000000 # 文本颜色
+      comment_font_point: 11
     native_dark:
       name: 系統暗色
       hilited_candidate_back_color: 0x434246  # 选中候选底色
