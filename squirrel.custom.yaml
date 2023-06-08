@@ -319,6 +319,7 @@ patch:
       inline_preedit: true              #设置是否双行显示
       label_color: 0x888888             #普通标签的颜色(非第一候选字)，也就是候选字数字
       label_font_point: 14              #普通标签的字体大小 
+      comment_font_point: 14            # 右边的提示字体
       # alpha: 0.75
       blur: true
       # translucency: true
@@ -335,7 +336,7 @@ patch:
       border_color_width: 0             #输入条边框宽度
       candidate_format: "%c %@  "       #设置每个候选词之间的间隔距离，%c代表备选的数字，%@代表候选字，可以通过输入空格的形式来调整每个候选字之间的间隔距离
       candidate_text_color: 0x333333    #候选字颜色
-      font_face: "汉仪正圆"             #字体
+      font_face: "HYZhengYuan-EEW"             #字体
       font_point: 20                    #字体大小
       text_color: 0x333333    
       candidate_back_color: 0xD05B21          #普通候选字的颜色，非第一候选字
@@ -364,7 +365,7 @@ patch:
       border_color_width: 0             #输入条边框宽度
       candidate_format: "%c %@  "       #设置每个候选词之间的间隔距离，%c代表备选的数字，%@代表候选字，可以通过输入空格的形式来调整每个候选字之间的间隔距离
       candidate_text_color: 0xffffff    #候选字颜色
-      font_face: "汉仪正圆"             #字体
+      font_face: "HYZhengYuan-EEW"             #字体
       font_point: 20                    #字体大小
       text_color: 0x333333    
       candidate_back_color: 0xD05B21          #普通候选字的颜色，非第一候选字

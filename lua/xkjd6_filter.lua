@@ -30,7 +30,7 @@ end
 local function commit_hint(cand)
     -- 不能顶的话会加个🚫
     if utf8.len(cand.text) < 2 then
-        cand:get_genuine().comment = '✖' .. cand.comment
+        cand:get_genuine().comment = '✖︎' .. cand.comment
     else
         cand:get_genuine().comment = cand.comment
     end
