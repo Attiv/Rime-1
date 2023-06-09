@@ -144,7 +144,9 @@ emoji_cn:
   tips: all
 
 jffh:
-  opencc_config: s2tw.json
+  # option_name: s2g
+  opencc_config: s2g.json
+  # opencc_config: s2tw.json
   option_name: jffh
 
 bmms:
