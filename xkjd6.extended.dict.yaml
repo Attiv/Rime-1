@@ -64,13 +64,13 @@ import_tables:
   - xkjd6.gbk
   - xkjd6.zidingyi
   - xkjd6.extra
-  - xkjd6.jisuanji
-  - xkjd6.yixue
-  - xkjd6.yinyang
-  - xkjd6.tangshi
-  - xkjd6.qiche
   - xmjd6.fjcy
   - xkjd6.hanyu
+  - xkjd6.yinyang
+  - xkjd6.yixue
+  - xkjd6.jisuanji
+  - xkjd6.qiche
+  - xkjd6.tangshi
   # - jdl_Z
 
 # =======================================
