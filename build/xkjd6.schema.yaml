@@ -5,7 +5,7 @@ __build_info:
   rime_version: 1.8.5
   timestamps:
     default: 1675621991
-    default.custom: 1682327158
+    default.custom: 1685632571
     key_bindings: 1677768981
     key_bindings.custom: 0
     punctuation: 1675621991
@@ -13,15 +13,9 @@ __build_info:
     symbols: 1675621991
     symbols.custom: 0
     xkjd6.custom: 0
-    xkjd6.schema: 1682647643
+    xkjd6.schema: 1686309882
 ascii_punct:
   option_name: ascii_punct
-bmms:
-  comment_format:
-    - "xform/'/ /"
-  opencc_config: pinyin.json
-  option_name: bmms
-  show_in_comment: true
 custom_phrase:
   db_class: stabledb
   dictionary: ""
@@ -29,7 +23,7 @@ custom_phrase:
   user_dict: custom_phrase
 emoji_cn:
   comment_format:
-    - "xform/.*//"
+    - "xform/.*/ /"
   opencc_config: emoji.json
   option_name: emoji_cn
   tips: all
@@ -39,19 +33,20 @@ emoji_suggestion:
   tips: all
 engine:
   filters:
-    - "simplifier@emoji_cn"
     - simplifier
+    - "simplifier@emoji_cn"
     - "simplifier@jffh"
-    - "simplifier@bmms"
     - "simplifier@EN2en"
     - "simplifier@ascii_punct"
     - "lua_filter@xkjd6_filter"
     - "lua_filter@preedit_filter"
     - "lua_filter@xmjd6en_filter"
-    - uniquifier
     - "reverse_lookup_filter@pinyin_simp_lookup"
     - "reverse_lookup_filter@quanpinerfen_lookup"
+    - "lua_filter@split_filter"
+    - uniquifier
   processors:
+    - "lua_processor@select_character"
     - "lua_processor@xuanchongjsq"
     - ascii_composer
     - recognizer
@@ -93,7 +88,7 @@ engine:
     - "script_translator@pinyin_simp"
     - "table_translator@xmjd6en"
 jffh:
-  opencc_config: s2tw.json
+  opencc_config: s2g.json
   option_name: jffh
 key_binder:
   bindings:
@@ -106,7 +101,6 @@ key_binder:
     - {accept: F6, select: .next, when: always}
     - {accept: F8, toggle: en_tran, when: composing}
     - {accept: F7, toggle: jffh, when: always}
-    - {accept: "^", toggle: bmms, when: has_menu}
     - {accept: KP_0, send: 0, when: composing}
     - {accept: KP_1, send: 1, when: composing}
     - {accept: KP_2, send: 2, when: composing}
@@ -122,6 +116,8 @@ key_binder:
     - {accept: KP_Multiply, send: "*", when: has_menu}
     - {accept: KP_Add, send: "+", when: has_menu}
     - {accept: KP_Decimal, send: ., when: has_menu}
+  select_first_character: bracketleft
+  select_last_character: bracketright
 layout:
   algebra:
     - "derive/^[bcdefghjklmnpqrstwxyz;]([bcdefghjklmnpqrstwxyz;][avuio].*)$/`$1/"
@@ -464,6 +460,13 @@ reverse_lookup:
     - "xform/$/〕/"
     - "xform/ /, /"
   dictionary: xkjd6cx
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: false
+  enable_sentence: false
+  enable_user_dict: false
+  encode_commit_history: false
+  overwrite_comment: true
 schema:
   dependencies:
     - xkjd6cx

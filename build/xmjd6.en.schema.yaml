@@ -2,13 +2,13 @@ __build_info:
   rime_version: 1.8.5
   timestamps:
     default: 1675621991
-    default.custom: 1682327158
+    default.custom: 1685632571
     key_bindings: 1677768981
     key_bindings.custom: 0
     punctuation: 1675621991
     punctuation.custom: 0
     xmjd6.en.custom: 0
-    xmjd6.en.schema: 1682588219
+    xmjd6.en.schema: 1682668858
 engine:
   filters:
     - simplifier

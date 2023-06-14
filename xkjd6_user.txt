@@ -2,8 +2,8 @@
 #@/db_name	xkjd6_user.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	572
-那	a	11
+#@/tick	718
+那	a	16
 Vitta	avt	31
 不	b	1
 办公	bfgy	1
@@ -55,21 +55,24 @@ Vitta	avt	31
 筋斗云	jdyu	30
 竞	jgovo	1
 竞秀	jgxq	15
+缉毒	jkdja	1
 简单	jmdf	6
 长	jp	11
 甲	jsia	1
 郡	jwava	1
 甲硝唑	jxzi	15
+孔明灯	kmd	1
 挎	kqi	1
+看似简单	ksjd	1
 坤	kwv	1
 澜	lfao	1
 兰	lfouvv	2
 立	lko	1
 离	lkov	11
 丽	lkvi	2
-兰兰佬	lll	25
+兰兰佬	lll	55
 柳	lqv	6
-拉	ls	6
+拉	ls	11
 龙	ly	16
 龙湖	lyhj	70
 铑	lzio	1
@@ -77,31 +80,37 @@ Vitta	avt	31
 妙	mca	18
 灭	mdv	11
 灭尽龙	mjl	101
-猫猫佬	mmlu	325
+猫猫佬	mmlu	405
 妙妙妙	mmm	38
+吗	ms	1
 猫佬	mzlz	150
 猫猫	mzmz	26
 猫	mzua	1
-你	n	6
+你	n	11
+镍价	ndjs	1
 尼	nka	1
 你好	nkhz	7
 娜	nsau	1
 啊	o	6
-旁	pp	1
+配合	pi	1
+旁	pp	6
 品质	pu	1
 求	qq	6
 QQ空间	qqkj	21
 郑	qrou	6
 热	re	1
 热热	rere	22
-热热佬	rrl	225
-三	s	1
+热热佬	rrl	290
+三	s	11
 搜	sd	1
 俗	sji	1
+诉苦	sjkj	1
+四绝	skjh	1
 斯	skvi	1
 他	t	1
 有	v	6
 有他	vt	5
+我	w	1
 王立坤	wlkv	65
 王沐歆	wmx	1
 王	wpv	11
@@ -205,6 +214,10 @@ QQ空间	qqkj	21
 甲硝唑	encjxoi	1
 甲硝唑	encjxzi	1
 丽丽	enclklk	1
+拉孔明灯	enclkmd	1
+拉孔明灯	enclkmo	1
+拉孔明灯	enclkod	1
+拉孔明灯	enclkoo	1
 丽丽	enclkop	1
 兰兰佬	enclll	1
 兰兰佬	enclllo	1
@@ -212,8 +225,12 @@ QQ空间	qqkj	21
 兰兰佬	enclloo	1
 兰兰佬	enclol	1
 兰兰佬	enclolo	1
+拉孔明灯	enclomd	1
+拉孔明灯	enclomo	1
 兰兰佬	encloo	1
+拉孔明灯	enclood	1
 兰兰佬	enclooo	1
+拉孔明灯	enclooo	1
 柳菂	enclqdk	1
 柳菂	enclqop	1
 拉挎	enclskq	1
@@ -250,6 +267,10 @@ QQ空间	qqkj	21
 筋斗云	encodyj	1
 在家办公	encojbg	1
 在家办公	encojbo	1
+三缉毒看似简单	encojdd	1
+三缉毒看似简单	encojde	1
+三缉毒看似简单	encojdj	1
+三缉毒看似简单	encojdo	1
 灭尽龙	encojlm	1
 在家办公	encojog	1
 灭尽龙	encojom	1
@@ -268,6 +289,8 @@ QQ空间	qqkj	21
 妙妙妙	encomom	1
 猫猫佬	encomom	1
 猫猫铑	encomom	1
+三镍价那你	enconjn	1
+三镍价那你	enconjo	1
 丹尼斯	enconod	1
 丹尼斯	enconsd	1
 在家办公	encoobg	1
